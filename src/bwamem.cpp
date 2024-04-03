@@ -1047,6 +1047,17 @@ int mem_kernel1_core(FMI_search *fmi,
         exit(EXIT_FAILURE);
     }
     printf_(VER, "6. Done! mem_collect_smem, num_smem: %ld\n", num_smem);
+    {
+      /* NEWLY ADDED: Print smems to stdout */
+      fprintf(stdout, ")))))))))))))))))))))))SMEMS(((((((((((((((((((((((\n");
+      SMEM *seed = matchArray;
+      while (seed) {
+        fprintf(stdout, "rid %d m %d n %d k %ld l %ld s %ld\n",\
+            seed->rid, seed->m, seed->n, seed->k, seed->l, seed->s);
+        seed++;
+      }
+      fprintf(stdout, ")))))))))))))))))))))))SMEMS(((((((((((((((((((((((\n");
+    }
     tprof[MEM_COLLECT][tid] += __rdtsc() - tim;
 
 

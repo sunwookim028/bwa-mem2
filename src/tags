@@ -1,0 +1,1253 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AC_KSEQ_H	kseq.h	32;"	d
+AC_KSORT_H	ksort.h	63;"	d
+AC_KVEC_H	kvec.h	49;"	d
+AC_VERSION_KHASH_H	khash.h	113;"	d
+ALIGN1	macro.h	90;"	d
+ALIGN_OFF	macro.h	58;"	d
+AMBIG	bandedSWA.cpp	44;"	d	file:
+AMBIG_	kswv.cpp	45;"	d	file:
+AMBQ	kswv.cpp	57;"	d	file:
+AMBQ16	kswv.cpp	51;"	d	file:
+AMBR	kswv.cpp	56;"	d	file:
+AMBR16	kswv.cpp	50;"	d	file:
+AMBRQ	kswv.cpp	55;"	d	file:
+ATTRIBUTE	utils.h	37;"	d
+ATTRIBUTE	utils.h	39;"	d
+AVG_SEEDS_PER_READ	macro.h	47;"	d
+BATCH_MUL	macro.h	49;"	d
+BATCH_SIZE	macro.h	48;"	d
+BUF_SIZE	kopen.cpp	400;"	d	file:
+BWAMEM_HPP	bwamem.h	32;"	d
+BWA_BUILD	macro.h	102;"	d
+BWA_BWT_H	bwt.h	32;"	d
+BWA_CTL_SIZE	bwa.h	45;"	d
+BWA_H_	bwa.h	32;"	d
+BWA_IDX_ALL	bwa.h	43;"	d
+BWA_IDX_ALL	read_index_ele.h	44;"	d
+BWA_IDX_BNS	bwa.h	41;"	d
+BWA_IDX_BNS	read_index_ele.h	42;"	d
+BWA_IDX_BWT	bwa.h	40;"	d
+BWA_IDX_BWT	read_index_ele.h	41;"	d
+BWA_IDX_PAC	bwa.h	42;"	d
+BWA_IDX_PAC	read_index_ele.h	43;"	d
+BWA_UBYTE	bntseq.h	37;"	d
+BWA_UBYTE	bwt.h	43;"	d
+BWT_BNTSEQ_H	bntseq.h	29;"	d
+BWT_FORWARD_A	macro.h	119;"	d
+BWT_FORWARD_B	macro.h	123;"	d
+BWT_REVERSE	macro.h	101;"	d
+BWT_REVERSE_A	macro.h	105;"	d
+BWT_REVERSE_B	macro.h	106;"	d
+BandedPairWiseSW	bandedSWA.cpp	/^BandedPairWiseSW::BandedPairWiseSW(const int o_del, const int e_del, const int o_ins,$/;"	f	class:BandedPairWiseSW
+BandedPairWiseSW	bandedSWA.h	/^class BandedPairWiseSW {$/;"	c
+CACHE_LINE	macro.h	57;"	d
+CLEFT	macro.h	124;"	d
+CNT	macro.h	133;"	d
+CONVERT	macro.h	83;"	d
+CP_BLOCK_SIZE	FMI_search.h	49;"	d
+CP_FILENAME_SUFFIX	FMI_search.h	50;"	d
+CP_MASK	FMI_search.h	51;"	d
+CP_OCC	FMI_search.h	/^}CP_OCC;$/;"	t	typeref:struct:checkpoint_occ_scalar
+CP_SHIFT	FMI_search.h	52;"	d
+CRIGHT	macro.h	125;"	d
+DEFAULT_AMBIG	bandedSWA.h	54;"	d
+DEFAULT_AMBIG	kswv.cpp	1618;"	d	file:
+DEFAULT_AMBIG	kswv.h	81;"	d
+DEFAULT_EXTEND	kswv.cpp	1617;"	d	file:
+DEFAULT_MATCH	kswv.cpp	1614;"	d	file:
+DEFAULT_MISMATCH	kswv.cpp	1615;"	d	file:
+DEFAULT_OPEN	kswv.cpp	1616;"	d	file:
+DP	bandedSWA.h	339;"	d
+DP	kswv.h	119;"	d
+DP1	bandedSWA.h	340;"	d
+DP1	kswv.h	120;"	d
+DP2	bandedSWA.h	341;"	d
+DP2	kswv.h	121;"	d
+DP3	bandedSWA.h	342;"	d
+DP3	kswv.h	122;"	d
+DUMMY1	bandedSWA.cpp	45;"	d	file:
+DUMMY1_	kswv.cpp	47;"	d	file:
+DUMMY2	bandedSWA.cpp	46;"	d	file:
+DUMMY2_	kswv.cpp	48;"	d	file:
+DUMMY3	kswv.cpp	49;"	d	file:
+DUMMY5	kswv.cpp	54;"	d	file:
+DUMMY8	kswv.cpp	53;"	d	file:
+DUMMY_CHAR	FMI_search.h	44;"	d
+E	ksw.h	/^	__m128i *qp, *H0, *H1, *E, *Hmax;$/;"	m	struct:_kswq_t
+E	kswv.h	/^	__m128i *qp, *H0, *H1, *E, *Hmax;$/;"	m	struct:__anon27
+EXTEND	macro.h	112;"	d
+F16	kswv.h	/^	int16_t *F16;$/;"	m	class:kswv
+F16_	bandedSWA.h	/^    int16_t *F16_;$/;"	m	class:BandedPairWiseSW
+F8	kswv.h	/^	uint8_t *F8;$/;"	m	class:kswv
+F8_	bandedSWA.h	/^    int8_t *F8_;$/;"	m	class:BandedPairWiseSW
+FAC	bwamem.cpp	2064;"	d	file:
+FASTMAP_HPP	fastmap.h	32;"	d
+FMI	macro.h	167;"	d
+FMI_search	FMI_search.cpp	/^FMI_search::FMI_search(const char *fname)$/;"	f	class:FMI_search
+FMI_search	FMI_search.h	/^class FMI_search: public indexEle$/;"	c
+FORWARD	macro.h	113;"	d
+FSYNC_ON_FLUSH	utils.cpp	27;"	d	file:
+GET_OCC	FMI_search.h	67;"	d
+H0	ksw.h	/^	__m128i *qp, *H0, *H1, *E, *Hmax;$/;"	m	struct:_kswq_t
+H0	kswv.h	/^	__m128i *qp, *H0, *H1, *E, *Hmax;$/;"	m	struct:__anon27
+H0_	macro.h	44;"	d
+H1	ksw.h	/^	__m128i *qp, *H0, *H1, *E, *Hmax;$/;"	m	struct:_kswq_t
+H1	kswv.h	/^	__m128i *qp, *H0, *H1, *E, *Hmax;$/;"	m	struct:__anon27
+H16_	bandedSWA.h	/^    int16_t *H16_, *H16__;$/;"	m	class:BandedPairWiseSW
+H16_0	kswv.h	/^	int16_t *H16_0, *H16_max, *H16_1;$/;"	m	class:kswv
+H16_1	kswv.h	/^	int16_t *H16_0, *H16_max, *H16_1;$/;"	m	class:kswv
+H16__	bandedSWA.h	/^    int16_t *H16_, *H16__;$/;"	m	class:BandedPairWiseSW
+H16_max	kswv.h	/^	int16_t *H16_0, *H16_max, *H16_1;$/;"	m	class:kswv
+H8_	bandedSWA.h	/^    int8_t *H8_, *H8__;$/;"	m	class:BandedPairWiseSW
+H8_0	kswv.h	/^	uint8_t *H8_0, *H8_max, *H8_1;$/;"	m	class:kswv
+H8_1	kswv.h	/^	uint8_t *H8_0, *H8_max, *H8_1;$/;"	m	class:kswv
+H8__	bandedSWA.h	/^    int8_t *H8_, *H8__;$/;"	m	class:BandedPairWiseSW
+H8_max	kswv.h	/^	uint8_t *H8_0, *H8_max, *H8_1;$/;"	m	class:kswv
+HTStatus	fastmap.cpp	/^int HTStatus()$/;"	f
+Hmax	ksw.h	/^	__m128i *qp, *H0, *H1, *E, *Hmax;$/;"	m	struct:_kswq_t
+Hmax	kswv.h	/^	__m128i *qp, *H0, *H1, *E, *Hmax;$/;"	m	struct:__anon27
+INDEX	macro.h	69;"	d
+INTROSORT	macro.h	142;"	d
+KBTREE_INIT	kbtree.h	370;"	d
+KB_DEFAULT_SIZE	kbtree.h	379;"	d
+KHASH_DECLARE	khash.h	345;"	d
+KHASH_INIT	khash.h	353;"	d
+KHASH_INIT2	khash.h	349;"	d
+KHASH_MAP_INIT_INT	khash.h	580;"	d
+KHASH_MAP_INIT_INT64	khash.h	595;"	d
+KHASH_MAP_INIT_STR	khash.h	611;"	d
+KHASH_SET_INIT_INT	khash.h	572;"	d
+KHASH_SET_INIT_INT64	khash.h	587;"	d
+KHASH_SET_INIT_STR	khash.h	603;"	d
+KO_FILE	kopen.cpp	302;"	d	file:
+KO_FTP	kopen.cpp	305;"	d	file:
+KO_HTTP	kopen.cpp	304;"	d	file:
+KO_PIPE	kopen.cpp	303;"	d	file:
+KO_STDIN	kopen.cpp	301;"	d	file:
+KSEQ_DECLARE	kseq.h	244;"	d
+KSEQ_INIT	kseq.h	242;"	d
+KSEQ_INIT2	kseq.h	236;"	d
+KSORT_INIT	ksort.h	80;"	d
+KSORT_INIT_GENERIC	ksort.h	280;"	d
+KSORT_INIT_STR	ksort.h	281;"	d
+KSORT_SWAP	ksort.h	78;"	d
+KSTREAM_INIT	kseq.h	155;"	d
+KSTRING_H	kstring.h	31;"	d
+KSTRING_T	kseq.h	90;"	d
+KSTRING_T	kstring.h	46;"	d
+KSW	macro.h	138;"	d
+KSW_XBYTE	ksw.h	31;"	d
+KSW_XBYTE	kswv.h	58;"	d
+KSW_XSTART	ksw.h	34;"	d
+KSW_XSTART	kswv.h	61;"	d
+KSW_XSTOP	ksw.h	32;"	d
+KSW_XSTOP	kswv.h	59;"	d
+KSW_XSUBO	ksw.h	33;"	d
+KSW_XSUBO	kswv.h	60;"	d
+KS_SEP_LINE	kseq.h	46;"	d
+KS_SEP_MAX	kseq.h	47;"	d
+KS_SEP_SPACE	kseq.h	44;"	d
+KS_SEP_TAB	kseq.h	45;"	d
+KTF_WORKER	macro.h	93;"	d
+KTHREAD_HPP	kthread.h	33;"	d
+KT_FOR	macro.h	92;"	d
+L2	bwt.h	/^	bwtint_t L2[5]; \/\/ C(), cumulative count$/;"	m	struct:__anon14
+LH3_UTILS_H	utils.h	29;"	d
+LIKELY	ksw.cpp	44;"	d	file:
+LIKELY	ksw.cpp	47;"	d	file:
+LIKELY	kswv.h	46;"	d
+LIKELY	kswv.h	49;"	d
+LIM_C	macro.h	62;"	d
+LIM_R	macro.h	61;"	d
+LMSpostproc1	sais.h	/^LMSpostproc1(string_type T, sarray_type SA, index_type n, index_type m) {$/;"	f	namespace:saisxx_private
+LMSpostproc2	sais.h	/^LMSpostproc2(sarray_type SA, index_type n, index_type m) {$/;"	f	namespace:saisxx_private
+LMSsort1	sais.h	/^LMSsort1(string_type T, sarray_type SA,$/;"	f	namespace:saisxx_private
+LMSsort2	sais.h	/^LMSsort2(string_type T, sarray_type SA,$/;"	f	namespace:saisxx_private
+LOW_INIT_VALUE	bandedSWA.h	85;"	d
+MAIN_CODE16	bandedSWA.cpp	1883;"	d	file:
+MAIN_CODE16	bandedSWA.cpp	327;"	d	file:
+MAIN_CODE16	bandedSWA.cpp	3387;"	d	file:
+MAIN_CODE8	bandedSWA.cpp	1842;"	d	file:
+MAIN_CODE8	bandedSWA.cpp	284;"	d	file:
+MAIN_CODE8	bandedSWA.cpp	4175;"	d	file:
+MAIN_HPP	main.h	32;"	d
+MAIN_SAM_CODE16_OPT	kswv.cpp	88;"	d	file:
+MAIN_SAM_CODE8_OPT	kswv.cpp	63;"	d	file:
+MAPPING_BOUND	bwamem_pair.cpp	53;"	d	file:
+MATRIX_MIN_CUTOFF	bandedSWA.h	84;"	d
+MAX_BAND_TRY	bwamem.cpp	51;"	d	file:
+MAX_LINE_LEN	bandedSWA.h	81;"	d
+MAX_LINE_LEN	macro.h	56;"	d
+MAX_NUM_PAIRS	bandedSWA.h	50;"	d
+MAX_NUM_PAIRS	kswv.h	78;"	d
+MAX_NUM_PAIRS_ALLOC	bandedSWA.h	51;"	d
+MAX_NUM_PAIRS_ALLOC	kswv.h	79;"	d
+MAX_SEEDS_PER_READ	macro.h	46;"	d
+MAX_SEQ_LEN16	bandedSWA.h	83;"	d
+MAX_SEQ_LEN8	bandedSWA.h	82;"	d
+MAX_SEQ_LEN_EXT	bandedSWA.h	49;"	d
+MAX_SEQ_LEN_EXT	kswv.h	68;"	d
+MAX_SEQ_LEN_QER	bandedSWA.h	48;"	d
+MAX_SEQ_LEN_QER_SAM	kswv.h	55;"	d
+MAX_SEQ_LEN_REF	bandedSWA.h	47;"	d
+MAX_SEQ_LEN_REF_SAM	kswv.h	54;"	d
+MAX_STDDEV	bwamem_pair.cpp	54;"	d	file:
+MAX_THREADS	macro.h	60;"	d
+MEM	macro.h	70;"	d
+MEM2	macro.h	71;"	d
+MEM3	macro.h	72;"	d
+MEMCPY_BWA_H	memcpy_bwamem.h	32;"	d
+MEM_ALN	macro.h	98;"	d
+MEM_ALN2	macro.h	108;"	d
+MEM_ALN2_A	macro.h	109;"	d
+MEM_ALN2_B	macro.h	110;"	d
+MEM_ALN2_C	macro.h	111;"	d
+MEM_ALN2_D	macro.h	168;"	d
+MEM_ALN2_DOWN	macro.h	164;"	d
+MEM_ALN2_DOWN1	macro.h	165;"	d
+MEM_ALN2_E	macro.h	169;"	d
+MEM_ALN2_PRE	macro.h	130;"	d
+MEM_ALN2_UP	macro.h	122;"	d
+MEM_ALN_M1	macro.h	126;"	d
+MEM_ALN_M2	macro.h	127;"	d
+MEM_CHAIN	macro.h	99;"	d
+MEM_CHAIN1	macro.h	114;"	d
+MEM_CHAIN2	macro.h	115;"	d
+MEM_COLLECT	macro.h	100;"	d
+MEM_F_ALL	bwamem.h	64;"	d
+MEM_F_KEEP_SUPP_MAPQ	bwamem.h	73;"	d
+MEM_F_NOPAIRING	bwamem.h	63;"	d
+MEM_F_NO_MULTI	bwamem.h	65;"	d
+MEM_F_NO_RESCUE	bwamem.h	66;"	d
+MEM_F_PE	bwamem.h	62;"	d
+MEM_F_PRIMARY5	bwamem.h	72;"	d
+MEM_F_REF_HDR	bwamem.h	67;"	d
+MEM_F_SMARTPE	bwamem.h	69;"	d
+MEM_F_SOFTCLIP	bwamem.h	68;"	d
+MEM_HSP_COEF	bwamem.cpp	233;"	d	file:
+MEM_MAPQ_COEF	bwamem.h	56;"	d
+MEM_MAPQ_MAX	bwamem.h	57;"	d
+MEM_MINSC_COEF	bwamem.cpp	234;"	d	file:
+MEM_PROCESS10	macro.h	77;"	d
+MEM_PROCESS2	macro.h	78;"	d
+MEM_SA	macro.h	107;"	d
+MEM_SA_BLOCK	macro.h	128;"	d
+MEM_SEEDSW_COEF	bwamem.cpp	235;"	d	file:
+MEM_SHORT_EXT	bwamem.cpp	230;"	d	file:
+MEM_SHORT_LEN	bwamem.cpp	231;"	d	file:
+MINUS_INF	ksw.cpp	544;"	d	file:
+MIN_DIR_CNT	bwamem_pair.cpp	50;"	d	file:
+MIN_DIR_RATIO	bwamem_pair.cpp	51;"	d	file:
+MIN_RATIO	bwamem_pair.cpp	49;"	d	file:
+MISC	macro.h	121;"	d
+MPI_TIME	macro.h	76;"	d
+MPI_TIME_MAX	macro.h	88;"	d
+MPI_TIME_MIN	macro.h	86;"	d
+MPI_TIME_SUM	macro.h	84;"	d
+NM	bwamem.h	/^    uint32_t is_rev:1, is_alt:1, mapq:8, NM:22; \/\/ is_rev: whether on the reverse strand; mapq: mapping quality; NM: edit distance$/;"	m	struct:__anon11
+N_SMEM_KERNEL	macro.h	51;"	d
+OCC_INTERVAL	bwt.h	39;"	d
+OCC_INTV_MASK	bwt.h	40;"	d
+OCC_INTV_SHIFT	bwt.h	38;"	d
+OUTLIER_BOUND	bwamem_pair.cpp	52;"	d	file:
+OUTPUT	macro.h	85;"	d
+OutScore	bandedSWA.h	/^} OutScore;$/;"	t	typeref:struct:dnaOutScore
+PACKAGE_VERSION	main.cpp	35;"	d	file:
+PACKED	macro.h	103;"	d
+PATCH_MAX_R_BW	bwamem.cpp	172;"	d	file:
+PATCH_MIN_SC_RATIO	bwamem.cpp	173;"	d	file:
+PE	macro.h	139;"	d
+PE1	macro.h	143;"	d
+PE11	macro.h	151;"	d
+PE12	macro.h	152;"	d
+PE13	macro.h	153;"	d
+PE14	macro.h	154;"	d
+PE15	macro.h	155;"	d
+PE16	macro.h	156;"	d
+PE17	macro.h	157;"	d
+PE18	macro.h	158;"	d
+PE19	macro.h	159;"	d
+PE2	macro.h	145;"	d
+PE20	macro.h	160;"	d
+PE21	macro.h	161;"	d
+PE22	macro.h	162;"	d
+PE23	macro.h	163;"	d
+PE24	macro.h	170;"	d
+PE25	macro.h	171;"	d
+PE26	macro.h	172;"	d
+PE3	macro.h	144;"	d
+PE4	macro.h	146;"	d
+PE5	macro.h	147;"	d
+PE6	macro.h	148;"	d
+PE7	macro.h	149;"	d
+PE8	macro.h	150;"	d
+PESORT	macro.h	141;"	d
+PESW	macro.h	140;"	d
+PFD	bandedSWA.cpp	1116;"	d	file:
+PFD	bandedSWA.cpp	3468;"	d	file:
+PFD	bandedSWA.cpp	411;"	d	file:
+PFD	bwamem.cpp	2065;"	d	file:
+PFD16	bandedSWA.cpp	2663;"	d	file:
+PFD8	bandedSWA.cpp	1969;"	d	file:
+PFD_	kswv.cpp	176;"	d	file:
+POST_SWA	macro.h	87;"	d
+PREPROCESS	macro.h	82;"	d
+PROCESS	macro.h	80;"	d
+QLEN	macro.h	131;"	d
+READ_IO	macro.h	79;"	d
+READ_LEN	macro.h	52;"	d
+REF_IO	macro.h	81;"	d
+SA	macro.h	104;"	d
+SAL_PFD	FMI_search.h	85;"	d
+SAM1	macro.h	73;"	d
+SAM2	macro.h	74;"	d
+SAM3	macro.h	75;"	d
+SAM_IO	macro.h	89;"	d
+SA_COMPRESSION	macro.h	64;"	d
+SA_COMPX	macro.h	65;"	d
+SA_COMPX_MASK	macro.h	66;"	d
+SCALAR_BANDEDSWA_HPP	bandedSWA.h	31;"	d
+SEEDS_PER_CHAIN	macro.h	50;"	d
+SEEDS_PER_READ	macro.h	45;"	d
+SEQ_FETCH	macro.h	129;"	d
+SEQ_LEN8	macro.h	54;"	d
+SIMD16	kswv.cpp	1442;"	d	file:
+SIMD_AVX	runsimd.cpp	51;"	d	file:
+SIMD_AVX2	runsimd.cpp	52;"	d	file:
+SIMD_AVX512BW	runsimd.cpp	54;"	d	file:
+SIMD_AVX512F	runsimd.cpp	53;"	d	file:
+SIMD_SSE	runsimd.cpp	45;"	d	file:
+SIMD_SSE2	runsimd.cpp	46;"	d	file:
+SIMD_SSE3	runsimd.cpp	47;"	d	file:
+SIMD_SSE4_1	runsimd.cpp	49;"	d	file:
+SIMD_SSE4_2	runsimd.cpp	50;"	d	file:
+SIMD_SSSE3	runsimd.cpp	48;"	d	file:
+SIMD_WIDTH16	bandedSWA.h	61;"	d
+SIMD_WIDTH16	bandedSWA.h	67;"	d
+SIMD_WIDTH16	bandedSWA.h	72;"	d
+SIMD_WIDTH16	bandedSWA.h	78;"	d
+SIMD_WIDTH16	kswv.h	72;"	d
+SIMD_WIDTH8	bandedSWA.h	60;"	d
+SIMD_WIDTH8	bandedSWA.h	66;"	d
+SIMD_WIDTH8	bandedSWA.h	71;"	d
+SIMD_WIDTH8	bandedSWA.h	77;"	d
+SIMD_WIDTH8	kswv.h	71;"	d
+SMEM	FMI_search.h	/^}SMEM;$/;"	t	typeref:struct:smem_struct
+SMEM1	macro.h	116;"	d
+SMEM2	macro.h	117;"	d
+SMEM3	macro.h	118;"	d
+SORT	macro.h	166;"	d
+SORT_BLOCK_SIZE	bandedSWA.h	86;"	d
+STR	macro.h	120;"	d
+SW_cells	bandedSWA.h	/^    uint64_t SW_cells;$/;"	m	class:BandedPairWiseSW
+SW_cells	kswv.cpp	/^uint64_t SW_cells;$/;"	v
+SeqPair	bandedSWA.h	/^}SeqPair;$/;"	t	typeref:struct:dnaSeqPair
+SeqPair	kswv.h	/^}SeqPair;$/;"	t	typeref:struct:dnaSeqPair
+T	bwamem.h	/^    int T;                  \/\/ output score threshold; only affecting output$/;"	m	struct:mem_opt_t
+TLEN	macro.h	132;"	d
+UNLIKELY	ksw.cpp	45;"	d	file:
+UNLIKELY	ksw.cpp	48;"	d	file:
+UNLIKELY	kswv.h	47;"	d
+UNLIKELY	kswv.h	50;"	d
+VER	macro.h	35;"	d
+WAVG	macro.h	134;"	d
+WCNT	macro.h	135;"	d
+WMAX	macro.h	136;"	d
+WMIN	macro.h	137;"	d
+WORKER10	macro.h	96;"	d
+WORKER11	macro.h	97;"	d
+WORKER20	macro.h	94;"	d
+WORKER21	macro.h	95;"	d
+XA	bwamem.h	/^    char *XA;        \/\/ alternative mappings$/;"	m	struct:__anon11
+XA_drop_ratio	bwamem.h	/^    float XA_drop_ratio;    \/\/ when counting hits for the XA tag, ignore alignments with score < XA_drop_ratio * max_score; only effective for the XA tag$/;"	m	struct:mem_opt_t
+ZSCORE16	bandedSWA.cpp	1868;"	d	file:
+ZSCORE16	bandedSWA.cpp	311;"	d	file:
+ZSCORE16	bandedSWA.cpp	3371;"	d	file:
+ZSCORE8	bandedSWA.cpp	1826;"	d	file:
+ZSCORE8	bandedSWA.cpp	268;"	d	file:
+ZSCORE8	bandedSWA.cpp	4159;"	d	file:
+_FMI_SEARCH_H	FMI_search.h	31;"	d
+_KO_NO_NET	kopen.cpp	61;"	d	file:
+_KSWV_H_	kswv.h	31;"	d
+_MACRO_HPP	macro.h	31;"	d
+_PROFILE_HPP	profiling.h	31;"	d
+_SAIS_HXX	sais.h	32;"	d
+__AC_KBTREE_H	kbtree.h	33;"	d
+__AC_KHASH_H	khash.h	105;"	d
+__AC_KSW_H	ksw.h	26;"	d
+__INDEX_ELE_HPP	read_index_ele.h	31;"	d
+__KB_DEL	kbtree.h	240;"	d
+__KB_GET	kbtree.h	140;"	d
+__KB_GET_AUX0	kbtree.h	110;"	d
+__KB_GET_AUX1	kbtree.h	124;"	d
+__KB_INIT	kbtree.h	58;"	d
+__KB_INTERVAL	kbtree.h	158;"	d
+__KB_KEY	kbtree.h	47;"	d
+__KB_PTR	kbtree.h	48;"	d
+__KB_PUT	kbtree.h	181;"	d
+__KB_TREE_T	kbtree.h	50;"	d
+__KHASH_IMPL	khash.h	198;"	d
+__KHASH_PROTOTYPES	khash.h	189;"	d
+__KHASH_TYPE	khash.h	181;"	d
+__KSEQ_BASIC	kseq.h	163;"	d
+__KSEQ_READ	kseq.h	184;"	d
+__KSEQ_TYPE	kseq.h	229;"	d
+__KS_BASIC	kseq.h	59;"	d
+__KS_GETC	kseq.h	77;"	d
+__KS_GETUNTIL	kseq.h	101;"	d
+__KS_TYPE	kseq.h	49;"	d
+__ac_HASH_UPPER	khash.h	/^static const double __ac_HASH_UPPER = 0.77;$/;"	v
+__ac_Wang_hash	khash.h	/^static kh_inline khint_t __ac_Wang_hash(khint_t key)$/;"	f
+__ac_X31_hash_string	khash.h	/^static kh_inline khint_t __ac_X31_hash_string(const char *s)$/;"	f
+__ac_fsize	khash.h	160;"	d
+__ac_inc	khash.h	155;"	d
+__ac_inc	khash.h	157;"	d
+__ac_isdel	khash.h	147;"	d
+__ac_iseither	khash.h	148;"	d
+__ac_isempty	khash.h	146;"	d
+__ac_set_isboth_false	khash.h	151;"	d
+__ac_set_isdel_false	khash.h	149;"	d
+__ac_set_isdel_true	khash.h	152;"	d
+__ac_set_isempty_false	khash.h	150;"	d
+__cpuid	fastmap.cpp	/^void __cpuid(unsigned int i, unsigned int cpuid[4]) {$/;"	f
+__cpuidex	runsimd.cpp	/^void __cpuidex(int cpuid[4], int func_id, int subfunc_id)$/;"	f
+__err_connect	kopen.cpp	82;"	d	file:
+__err_connect	kopen.cpp	98;"	d	file:
+__err_connect2	kopen.cpp	83;"	d	file:
+__err_connect2	kopen.cpp	99;"	d	file:
+__kb_destroy	kbtree.h	78;"	d
+__kb_get_first	kbtree.h	103;"	d
+__kb_traverse	kbtree.h	345;"	d
+__kbstack_t	kbtree.h	/^} __kbstack_t;$/;"	t	typeref:struct:__anon21
+__kstring_t	kseq.h	/^typedef struct __kstring_t {$/;"	s
+__kstring_t	kstring.h	/^typedef struct __kstring_t {$/;"	s
+__max_16	ksw.cpp	120;"	d	file:
+__max_16	kswv.cpp	1315;"	d	file:
+__max_16	kswv.h	111;"	d
+__max_8	ksw.cpp	241;"	d	file:
+__max_8	kswv.cpp	1444;"	d	file:
+__mmask16	bandedSWA.cpp	37;"	d	file:
+__mmask16	bandedSWA.h	44;"	d
+__mmask32	bandedSWA.cpp	38;"	d	file:
+__mmask8	bandedSWA.cpp	36;"	d	file:
+__mmask8	bandedSWA.h	43;"	d
+__rdtsc	utils.h	/^static inline unsigned long long __rdtsc(void)$/;"	f
+_err_fatal_simple	utils.cpp	/^void _err_fatal_simple(const char *func, const char *msg)$/;"	f
+_err_fatal_simple_core	utils.cpp	/^void _err_fatal_simple_core(const char *func, const char *msg)$/;"	f
+_get_pac	bntseq.cpp	247;"	d	file:
+_get_pac	bwamem.cpp	1829;"	d	file:
+_kswq_t	ksw.h	/^struct _kswq_t {$/;"	s
+_mm256_blendv_epi16	bandedSWA.cpp	307;"	d	file:
+_mm_blendv_epi16	bandedSWA.cpp	/^_mm_blendv_epi16(__m128i x, __m128i y, __m128i mask)$/;"	f	file:
+_mm_blendv_epi8	bandedSWA.cpp	/^static inline __m128i _mm_blendv_epi8 (__m128i x, __m128i y, __m128i mask)$/;"	f	file:
+_mm_countbits_64	FMI_search.h	/^static inline int _mm_countbits_64(unsigned long x) {$/;"	f
+_mm_realloc	bwamem.cpp	/^void* _mm_realloc(void *ptr, int64_t csize, int64_t nsize, int16_t dsize) {$/;"	f
+_set_pac	bntseq.cpp	246;"	d	file:
+a	bwamem.h	/^    int a, b;               \/\/ match score and mismatch penalty$/;"	m	struct:mem_opt_t
+a	bwamem.h	/^typedef struct { size_t n, m, cc; mem_chain_t *a;  } mem_chain_v;$/;"	m	struct:__anon8
+a	bwamem.h	/^typedef struct { size_t n, m; mem_alnreg_t *a; } mem_alnreg_v;$/;"	m	struct:__anon9
+a	bwt.h	/^typedef struct { size_t n, m; bwtintv_t *a; } bwtintv_v;$/;"	m	struct:__anon17
+a	kvec.h	/^	int *a;$/;"	m	struct:__anon31
+a	utils.h	/^typedef struct { size_t n, m; pair64_t *a; } pair64_v;$/;"	m	struct:__anon35
+a	utils.h	/^typedef struct { size_t n, m; uint64_t *a; } uint64_v;$/;"	m	struct:__anon34
+abc	bwamem.h	/^    abc() {$/;"	f	struct:abc
+abc	bwamem.h	/^typedef struct abc {$/;"	s
+actual_chunk_size	fastmap.h	/^	int64_t actual_chunk_size;$/;"	m	struct:__anon18
+add1	bntseq.cpp	/^static uint8_t *add1(const kseq_t *seq, bntseq_t *bns, uint8_t *pac, int64_t *m_pac, int *m_seqs, int *m_holes, bntamb1_t **q)$/;"	f	file:
+add_cigar	bwamem.cpp	/^static inline void add_cigar(const mem_opt_t *opt, mem_aln_t *p, kstring_t *str, int which)$/;"	f	file:
+affy	fastmap.cpp	/^int affy[256];$/;"	v
+aln	bwamem.h	/^    int aln;$/;"	m	struct:abc
+alnreg_hlt	bwamem.cpp	155;"	d	file:
+alnreg_hlt2	bwamem.cpp	158;"	d	file:
+alnreg_slt	bwamem.cpp	152;"	d	file:
+alnreg_slt2	bwamem.cpp	149;"	d	file:
+alt_sc	bwamem.h	/^    int alt_sc;$/;"	m	struct:mem_alnreg_t
+alt_sc	bwamem.h	/^    int score, sub, alt_sc;$/;"	m	struct:__anon11
+amb	bntseq.h	/^	char amb;$/;"	m	struct:__anon3
+ambs	bntseq.h	/^	bntamb1_t *ambs; \/\/ n_holes elements$/;"	m	struct:__anon4
+anno	bntseq.h	/^	char *name, *anno;$/;"	m	struct:__anon2
+anns	bntseq.h	/^	bntann1_t *anns; \/\/ n_seqs elements$/;"	m	struct:__anon4
+assert_not_null	FMI_search.h	46;"	d
+aux	bwamem.h	/^    smem_aux_t      **aux;$/;"	m	struct:worker_t
+aux	fastmap.h	/^	ktp_aux_t *aux;$/;"	m	struct:__anon19
+auxSeedBuf	bwamem.h	/^    mem_seed_t       *auxSeedBuf;$/;"	m	struct:worker_t
+auxSeedBufSize	bwamem.h	/^    int64_t           auxSeedBufSize;$/;"	m	struct:worker_t
+avg	bwamem.h	/^    double avg, std; \/\/ mean and stddev of the insert size distribution$/;"	m	struct:__anon10
+b	bwamem.h	/^    int a, b;               \/\/ match score and mismatch penalty$/;"	m	struct:mem_opt_t
+backwardExt	FMI_search.cpp	/^SMEM FMI_search::backwardExt(SMEM smem, uint8_t a)$/;"	f	class:FMI_search
+bns	bwa.h	/^	bntseq_t *bns; \/\/ information on the reference sequences$/;"	m	struct:__anon5
+bns	read_index_ele.h	/^	bntseq_t *bns; \/\/ information on the reference sequences$/;"	m	struct:__anon32
+bns_cnt_ambi	bntseq.cpp	/^int bns_cnt_ambi(const bntseq_t *bns, int64_t pos_f, int len, int *ref_id)$/;"	f
+bns_depos	bntseq.h	/^static inline int64_t bns_depos(const bntseq_t *bns, int64_t pos, int *is_rev)$/;"	f
+bns_destroy	bntseq.cpp	/^void bns_destroy(bntseq_t *bns)$/;"	f
+bns_dump	bntseq.cpp	/^void bns_dump(const bntseq_t *bns, const char *prefix)$/;"	f
+bns_fasta2bntseq	bntseq.cpp	/^int64_t bns_fasta2bntseq(gzFile fp_fa, const char *prefix, int for_only)$/;"	f
+bns_fetch_seq	bntseq.cpp	/^uint8_t *bns_fetch_seq(const bntseq_t *bns, const uint8_t *pac, int64_t *beg, int64_t mid, int64_t *end, int *rid)$/;"	f
+bns_fetch_seq_v2	bwamem.cpp	/^uint8_t *bns_fetch_seq_v2(const bntseq_t *bns, const uint8_t *pac,$/;"	f
+bns_get_seq	bntseq.cpp	/^uint8_t *bns_get_seq(int64_t l_pac, const uint8_t *pac, int64_t beg, int64_t end, int64_t *len)$/;"	f
+bns_get_seq_v2	bwamem.cpp	/^uint8_t *bns_get_seq_v2(int64_t l_pac, const uint8_t *pac, int64_t beg, int64_t end,$/;"	f
+bns_intv2rid	bntseq.cpp	/^int bns_intv2rid(const bntseq_t *bns, int64_t rb, int64_t re)$/;"	f
+bns_pos2rid	bntseq.cpp	/^int bns_pos2rid(const bntseq_t *bns, int64_t pos_f)$/;"	f
+bns_restore	bntseq.cpp	/^bntseq_t *bns_restore(const char *prefix)$/;"	f
+bns_restore_core	bntseq.cpp	/^bntseq_t *bns_restore_core(const char *ann_filename, const char* amb_filename, const char* pac_filename)$/;"	f
+bntamb1_t	bntseq.h	/^} bntamb1_t;$/;"	t	typeref:struct:__anon3
+bntann1_t	bntseq.h	/^} bntann1_t;$/;"	t	typeref:struct:__anon2
+bntseq_t	bntseq.h	/^} bntseq_t;$/;"	t	typeref:struct:__anon4
+bseq1_t	bwa.h	/^} bseq1_t;$/;"	t	typeref:struct:__anon6
+bseq_classify	bwa.cpp	/^void bseq_classify(int n, bseq1_t *seqs, int m[2], bseq1_t *sep[2])$/;"	f
+bseq_read	bwa.cpp	/^bseq1_t *bseq_read(int64_t chunk_size, int *n_, void *ks1_, void *ks2_,$/;"	f
+bseq_read_one_fasta_file	bwa.cpp	/^bseq1_t *bseq_read_one_fasta_file(int64_t chunk_size, int *n_, gzFile fp, int64_t *s)$/;"	f
+bseq_read_orig	bwa.cpp	/^bseq1_t *bseq_read_orig(int64_t chunk_size, int *n_, void *ks1_, void *ks2_, int64_t *s)$/;"	f
+build_fm_index	FMI_search.cpp	/^int FMI_search::build_fm_index(const char *ref_file_name, char *binary_seq, int64_t ref_seq_len, int64_t *sa_bwt, int64_t *count) {$/;"	f	class:FMI_search
+build_index	FMI_search.cpp	/^int FMI_search::build_index() {$/;"	f	class:FMI_search
+bwa_escape	bwa.cpp	/^static char *bwa_escape(char *s)$/;"	f	file:
+bwa_fa2pac	bntseq.cpp	/^int bwa_fa2pac(int argc, char *argv[])$/;"	f
+bwa_fill_scmat	bwa.cpp	/^void bwa_fill_scmat(int a, int b, int8_t mat[25])$/;"	f
+bwa_fill_scmat	kswv.cpp	/^void kswv::bwa_fill_scmat(int8_t mat[25]) {$/;"	f	class:kswv
+bwa_gen_cigar	bwa.cpp	/^uint32_t *bwa_gen_cigar(const int8_t mat[25], int q, int r, int w_, int64_t l_pac, const uint8_t *pac, int l_query, uint8_t *query, int64_t rb, int64_t re, int *score, int *n_cigar, int *NM)$/;"	f
+bwa_gen_cigar2	bwa.cpp	/^uint32_t *bwa_gen_cigar2(const int8_t mat[25], int o_del, int e_del, int o_ins, int e_ins, int w_, int64_t l_pac, const uint8_t *pac, int l_query, uint8_t *query, int64_t rb, int64_t re, int *score, int *n_cigar, int *NM)$/;"	f
+bwa_idx_build	bwtindex.cpp	/^int bwa_idx_build(const char *fa, const char *prefix)$/;"	f
+bwa_idx_infer_prefix	read_index_ele.cpp	/^char* indexEle::bwa_idx_infer_prefix(const char *hint)$/;"	f	class:indexEle
+bwa_idx_load_ele	read_index_ele.cpp	/^void indexEle::bwa_idx_load_ele(const char *hint, int which)$/;"	f	class:indexEle
+bwa_index	bwtindex.cpp	/^int bwa_index(int argc, char *argv[]) \/\/ the "index" command$/;"	f
+bwa_insert_header	bwa.cpp	/^char *bwa_insert_header(const char *s, char *hdr)$/;"	f
+bwa_pg	bwa.cpp	/^char *bwa_pg;$/;"	v
+bwa_print_sam_hdr	bwa.cpp	/^void bwa_print_sam_hdr(const bntseq_t *bns, const char *hdr_line, FILE *fp)$/;"	f
+bwa_rg_id	bwa.cpp	/^char bwa_rg_id[256];$/;"	v
+bwa_set_rg	bwa.cpp	/^char *bwa_set_rg(const char *s)$/;"	f
+bwa_verbose	bwa.cpp	/^int bwa_verbose = 3;$/;"	v
+bwaidx_fm_t	read_index_ele.h	/^} bwaidx_fm_t;$/;"	t	typeref:struct:__anon32
+bwaidx_t	bwa.h	/^} bwaidx_t;$/;"	t	typeref:struct:__anon5
+bwt	bwa.h	/^	bwt_t    *bwt; \/\/ FM-index$/;"	m	struct:__anon5
+bwt	bwt.h	/^	uint32_t *bwt; \/\/ BWT$/;"	m	struct:__anon14
+bwt2_t	bwt.h	/^} bwt2_t;$/;"	t	typeref:struct:__anon15
+bwtSeedStrategyAllPosOneThread	FMI_search.cpp	/^int64_t FMI_search::bwtSeedStrategyAllPosOneThread(uint8_t *enc_qdb,$/;"	f	class:FMI_search
+bwt_B0	bwt.h	89;"	d
+bwt_bwt	bwt.h	83;"	d
+bwt_occ_intv	bwt.h	84;"	d
+bwt_set_intv	bwt.h	91;"	d
+bwt_size	bwt.h	/^	bwtint_t bwt_size; \/\/ size of bwt, about seq_len\/4$/;"	m	struct:__anon14
+bwt_t	bwt.h	/^} bwt_t;$/;"	t	typeref:struct:__anon14
+bwtint_t	bwt.h	/^typedef uint64_t bwtint_t;$/;"	t
+bwtintv_t	bwt.h	/^} bwtintv_t;$/;"	t	typeref:struct:__anon16
+bwtintv_v	bwt.h	/^typedef struct { size_t n, m; bwtintv_t *a; } bwtintv_v;$/;"	t	typeref:struct:__anon17
+c	bwamem.h	/^    mem_chain_t *c;$/;"	m	struct:mem_alnreg_t
+cal_max_gap	bwamem.cpp	/^static inline int cal_max_gap(const mem_opt_t *opt, int qlen)$/;"	f	file:
+cal_sub	bwamem_pair.cpp	/^static int cal_sub(const mem_opt_t *opt, mem_alnreg_v *r)$/;"	f	file:
+call_one_step	FMI_search.cpp	/^int64_t FMI_search::call_one_step(int64_t pos, int64_t &sa_entry, int64_t &offset)$/;"	f	class:FMI_search
+cc	bwamem.h	/^typedef struct { size_t n, m, cc; mem_chain_t *a;  } mem_chain_v;$/;"	m	struct:__anon8
+chain_ar	bwamem.h	/^    mem_chain_v      *chain_ar;$/;"	m	struct:worker_t
+chain_cmp	bwamem.cpp	40;"	d	file:
+checkpoint_occ_scalar	FMI_search.h	/^typedef struct checkpoint_occ_scalar$/;"	s
+chn_beg	bwamem.cpp	58;"	d	file:
+chn_end	bwamem.cpp	59;"	d	file:
+chunk_size	bwamem.h	/^    int64_t chunk_size;         \/\/ process chunk_size-bp sequences in a batch$/;"	m	struct:mem_opt_t
+cigar	bwamem.h	/^    uint32_t *cigar; \/\/ CIGAR in the BAM encoding: opLen<<4|op; op to integer mapping: MIDSH=>01234$/;"	m	struct:__anon11
+clock_freq	kswv.cpp	/^double clock_freq;$/;"	v
+cmd2argv	kopen.cpp	/^static char **cmd2argv(const char *cmd)$/;"	f	file:
+cnt_table	bwt.h	/^	uint32_t cnt_table[256];$/;"	m	struct:__anon14
+comment	bwa.h	/^	char *name, *comment, *seq, *qual, *sam;$/;"	m	struct:__anon6
+compare_smem	FMI_search.cpp	/^int compare_smem(const void *a, const void *b)$/;"	f
+computeBWT	sais.h	/^computeBWT(string_type T, sarray_type SA, bucketC_type C, bucketB_type B,$/;"	f	namespace:saisxx_private
+copy_comment	fastmap.h	/^	int copy_comment;$/;"	m	struct:__anon18
+count	FMI_search.h	/^        int64_t count[5];$/;"	m	class:FMI_search
+count	bwt.h	/^	int count[5];$/;"	m	struct:__anon15
+cp_count	FMI_search.h	/^    int64_t cp_count[4];$/;"	m	struct:checkpoint_occ_scalar
+cp_occ	FMI_search.h	/^        CP_OCC *cp_occ;$/;"	m	class:FMI_search
+cputime	utils.cpp	/^double cputime()$/;"	f
+cseed	bwamem.h	/^    int32_t seqid, cseed;$/;"	m	struct:__anon7
+csub	bwamem.h	/^    int csub;       \/\/ SW score of a tandem hit$/;"	m	struct:mem_alnreg_t
+ctrl_fd	kopen.cpp	/^	int max_response, ctrl_fd;$/;"	m	struct:__anon22	file:
+cv	kthread.h	/^	pthread_cond_t cv;$/;"	m	struct:ktp_t
+data	kthread.h	/^	void *data;$/;"	m	struct:__anon29
+data	kthread.h	/^	void *data;$/;"	m	struct:kt_for_t
+depth	ksort.h	/^	int depth;$/;"	m	struct:__anon24
+display_stats	profiling.cpp	/^int display_stats(int nthreads)$/;"	f
+dnaOutScore	bandedSWA.h	/^typedef struct dnaOutScore$/;"	s
+dnaSeqPair	bandedSWA.h	/^typedef struct dnaSeqPair$/;"	s
+dnaSeqPair	kswv.h	/^typedef struct dnaSeqPair$/;"	s
+done	bwamem.h	/^    int8_t done;$/;"	m	struct:abc
+drop_ratio	bwamem.h	/^    float drop_ratio;       \/\/ drop a chain if its seed coverage is below drop_ratio times the seed coverage of a better chain overlapping with the small chain$/;"	m	struct:mem_opt_t
+e	bandedSWA.h	/^    int32_t h, e;$/;"	m	struct:__anon1
+e	ksw.cpp	/^	int32_t h, e;$/;"	m	struct:__anon25	file:
+e_del	bandedSWA.h	/^    int o_del, o_ins, e_del, e_ins;$/;"	m	class:BandedPairWiseSW
+e_del	bwamem.h	/^    int o_del, e_del;$/;"	m	struct:mem_opt_t
+e_del	kswv.h	/^	int o_del, o_ins, e_del, e_ins;$/;"	m	class:kswv
+e_ins	bandedSWA.h	/^    int o_del, o_ins, e_del, e_ins;$/;"	m	class:BandedPairWiseSW
+e_ins	bwamem.h	/^    int o_ins, e_ins;$/;"	m	struct:mem_opt_t
+e_ins	kswv.h	/^	int o_del, o_ins, e_del, e_ins;$/;"	m	class:kswv
+eh_t	bandedSWA.h	/^} eh_t;$/;"	t	typeref:struct:__anon1
+eh_t	ksw.cpp	/^} eh_t;$/;"	t	typeref:struct:__anon25	file:
+enc_qdb	bwamem.h	/^    uint8_t *enc_qdb[MAX_THREADS];$/;"	m	struct:__anon13
+end_bonus	bandedSWA.h	/^    int end_bonus, zdrop;$/;"	m	class:BandedPairWiseSW
+err_fatal	utils.cpp	/^void err_fatal(const char *header, const char *fmt, ...)$/;"	f
+err_fatal_core	utils.cpp	/^void err_fatal_core(const char *header, const char *fmt, ...)$/;"	f
+err_fatal_simple	utils.h	42;"	d
+err_fatal_simple_core	utils.h	43;"	d
+err_fclose	utils.cpp	/^int err_fclose(FILE *stream) $/;"	f
+err_fflush	utils.cpp	/^int err_fflush(FILE *stream) $/;"	f
+err_fgets	utils.cpp	/^char* err_fgets(char *str, int size, FILE *stream)$/;"	f
+err_fprintf	utils.cpp	/^int err_fprintf(FILE *stream, const char *format, ...) $/;"	f
+err_fputc	utils.cpp	/^int err_fputc(int c, FILE *stream)$/;"	f
+err_fputs	utils.cpp	/^int err_fputs(const char *s, FILE *stream)$/;"	f
+err_fread_noeof	utils.cpp	/^size_t err_fread_noeof(void *ptr, size_t size, size_t nmemb, FILE *stream)$/;"	f
+err_fseek	utils.cpp	/^int err_fseek(FILE *stream, long offset, int whence)$/;"	f
+err_ftell	utils.cpp	/^long err_ftell(FILE *stream)$/;"	f
+err_fwrite	utils.cpp	/^size_t err_fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream)$/;"	f
+err_gzclose	utils.cpp	/^int err_gzclose(gzFile file)$/;"	f
+err_gzread	utils.cpp	/^int err_gzread(gzFile file, void *ptr, unsigned int len)$/;"	f
+err_printf	utils.cpp	/^int err_printf(const char *format, ...) $/;"	f
+err_putchar	utils.h	99;"	d
+err_puts	utils.cpp	/^int err_puts(const char *s)$/;"	f
+err_rewind	utils.h	92;"	d
+err_xopen_core	utils.cpp	/^FILE *err_xopen_core(const char *func, const char *fn, const char *mode)$/;"	f
+err_xreopen_core	utils.cpp	/^FILE *err_xreopen_core(const char *func, const char *fn, const char *mode, FILE *fp)$/;"	f
+err_xzopen_core	utils.cpp	/^gzFile err_xzopen_core(const char *func, const char *fn, const char *mode)$/;"	f
+exe_path	runsimd.cpp	/^static int exe_path(const char *exe, int max, char buf[], int *base_st)$/;"	f	file:
+failed	bwamem.h	/^    int failed;      \/\/ non-zero if the orientation is not supported by sufficient data$/;"	m	struct:__anon10
+fd	kopen.cpp	/^	int type, fd;$/;"	m	struct:__anon23	file:
+file_name	FMI_search.h	/^        char file_name[PATH_MAX];$/;"	m	class:FMI_search
+find_opt	profiling.cpp	/^int find_opt(uint64_t *a, int len, uint64_t *max, uint64_t *min, double *avg)$/;"	f
+find_stats	kswv.cpp	/^uint64_t find_stats(uint64_t *val, int nt, double &min, double &max, double &avg)$/;"	f
+first	bwamem.h	/^    int32_t n, m, first, rid;$/;"	m	struct:__anon7
+flag	bwamem.h	/^    int flag;               \/\/ see MEM_F_* macros$/;"	m	struct:mem_opt_t
+flag	bwamem.h	/^    int flag;        \/\/ extra flag$/;"	m	struct:__anon11
+flg	bwamem.h	/^    int flg;$/;"	m	struct:mem_alnreg_t
+flt_lt	bwamem.cpp	61;"	d	file:
+fmi	bwamem.h	/^    FMI_search       *fmi;  $/;"	m	struct:worker_t
+fmi	fastmap.h	/^	FMI_search *fmi;	$/;"	m	struct:__anon18
+fp	fastmap.h	/^	FILE *fp;$/;"	m	struct:__anon18
+fp_pac	bntseq.h	/^	FILE *fp_pac;$/;"	m	struct:__anon4
+frac_rep	bwamem.h	/^    float frac_rep;$/;"	m	struct:__anon7
+frac_rep	bwamem.h	/^    float frac_rep;$/;"	m	struct:mem_alnreg_t
+freq	kswv.cpp	/^double freq = 2.3*1e9;$/;"	v
+ftp_open	kopen.cpp	/^static int ftp_open(const char *fn)$/;"	f	file:
+ftpaux_t	kopen.cpp	/^} ftpaux_t;$/;"	t	typeref:struct:__anon22	file:
+func	kthread.h	/^	int (*func)(void*);$/;"	m	struct:ktp_t
+func	kthread.h	/^	void (*func)(void*, int, int, int);$/;"	m	struct:kt_for_t
+g_defr	ksw.h	/^const kswr_t g_defr = { 0, -1, -1, -1, -1, -1, -1 };$/;"	v
+g_defr	kswv.h	/^const kswr_t g_defr = { 0, -1, -1, -1, -1, -1, -1 };$/;"	v
+g_qmax	kswv.h	/^	int g_qmax;$/;"	m	class:kswv
+getBuckets	sais.h	/^getBuckets(const bucketC_type C, bucketB_type B, index_type k, bool end) {$/;"	f	namespace:saisxx_private
+getCounts	sais.h	/^getCounts(const string_type T, bucket_type C, index_type n, index_type k) {$/;"	f	namespace:saisxx_private
+getSMEMs	FMI_search.cpp	/^void FMI_search::getSMEMs(uint8_t *enc_qdb,$/;"	f	class:FMI_search
+getSMEMsAllPosOneThread	FMI_search.cpp	/^void FMI_search::getSMEMsAllPosOneThread(uint8_t *enc_qdb,$/;"	f	class:FMI_search
+getSMEMsOnePosOneThread	FMI_search.cpp	/^void FMI_search::getSMEMsOnePosOneThread(uint8_t *enc_qdb,$/;"	f	class:FMI_search
+getScores16	bandedSWA.cpp	/^void BandedPairWiseSW::getScores16(SeqPair *pairArray,$/;"	f	class:BandedPairWiseSW
+getScores16	kswv.cpp	/^void kswv::getScores16(SeqPair *pairArray,$/;"	f	class:kswv
+getScores8	bandedSWA.cpp	/^void BandedPairWiseSW::getScores8(SeqPair *pairArray,$/;"	f	class:BandedPairWiseSW
+getScores8	kswv.cpp	/^void kswv::getScores8(SeqPair *pairArray,$/;"	f	class:kswv
+getTicks	bandedSWA.cpp	/^int64_t BandedPairWiseSW::getTicks()$/;"	f	class:BandedPairWiseSW
+get_pri_idx	bwamem_extra.cpp	/^static inline int get_pri_idx(double XA_drop_ratio, const mem_alnreg_t *a, int i)$/;"	f	file:
+get_rlen	bwamem.cpp	/^static inline int get_rlen(int n_cigar, const uint32_t *cigar)$/;"	f	file:
+get_sa_entries	FMI_search.cpp	/^void FMI_search::get_sa_entries(SMEM *smemArray, int64_t *coordArray, int32_t *coordCountArray, uint32_t count, int32_t max_occ)$/;"	f	class:FMI_search
+get_sa_entries	FMI_search.cpp	/^void FMI_search::get_sa_entries(SMEM *smemArray, int64_t *coordArray, int32_t *coordCountArray, uint32_t count, int32_t max_occ, int tid)$/;"	f	class:FMI_search
+get_sa_entries	FMI_search.cpp	/^void FMI_search::get_sa_entries(int64_t *posArray, int64_t *coordArray, uint32_t count, int32_t nthreads)$/;"	f	class:FMI_search
+get_sa_entries_prefetch	FMI_search.cpp	/^void FMI_search::get_sa_entries_prefetch(SMEM *smemArray, int64_t *coordArray,$/;"	f	class:FMI_search
+get_sa_entry	FMI_search.cpp	/^int64_t FMI_search::get_sa_entry(int64_t pos)$/;"	f	class:FMI_search
+get_sa_entry_compressed	FMI_search.cpp	/^int64_t FMI_search::get_sa_entry_compressed(int64_t pos, int tid)$/;"	f	class:FMI_search
+gi	bntseq.h	/^	uint32_t gi;$/;"	m	struct:__anon2
+gscore	bandedSWA.h	/^    int32_t gscore, max_off;$/;"	m	struct:dnaOutScore
+gscore	bandedSWA.h	/^    int32_t gscore, max_off;$/;"	m	struct:dnaSeqPair
+gtle	bandedSWA.h	/^    int32_t score, tle, gtle, qle;$/;"	m	struct:dnaOutScore
+gtle	bandedSWA.h	/^    int32_t score, tle, gtle, qle;$/;"	m	struct:dnaSeqPair
+h	bandedSWA.h	/^    int32_t h, e;$/;"	m	struct:__anon1
+h	ksw.cpp	/^	int32_t h, e;$/;"	m	struct:__anon25	file:
+h0	bandedSWA.h	/^    int32_t h0;$/;"	m	struct:dnaSeqPair
+h0	kswv.cpp	/^int8_t h0 = 0;$/;"	v
+h0	kswv.h	/^	int32_t h0;$/;"	m	struct:dnaSeqPair
+hash	bwamem.h	/^    uint64_t hash;$/;"	m	struct:mem_alnreg_t
+hash_64	utils.h	/^static inline uint64_t hash_64(uint64_t key)$/;"	f
+high	bwamem.h	/^    int low, high;   \/\/ lower and upper bounds within which a read pair is considered to be properly paired$/;"	m	struct:__anon10
+http_open	kopen.cpp	/^static int http_open(const char *fn)$/;"	f	file:
+i	kbtree.h	/^	int i;$/;"	m	struct:__anon21
+i	kthread.h	/^	int i;$/;"	m	struct:__anon29
+i	kthread.h	/^	long i;$/;"	m	struct:__anon30
+id	bandedSWA.h	/^    int32_t idr, idq, id;$/;"	m	struct:dnaSeqPair
+id	bwa.h	/^	int l_seq, id;$/;"	m	struct:__anon6
+id	kswv.h	/^	int32_t idr, idq, id;$/;"	m	struct:dnaSeqPair
+idq	bandedSWA.h	/^    int32_t idr, idq, id;$/;"	m	struct:dnaSeqPair
+idq	kswv.h	/^	int32_t idr, idq, id;$/;"	m	struct:dnaSeqPair
+idr	bandedSWA.h	/^    int32_t idr, idq, id;$/;"	m	struct:dnaSeqPair
+idr	kswv.h	/^	int32_t idr, idq, id;$/;"	m	struct:dnaSeqPair
+idx	read_index_ele.h	/^	bwaidx_fm_t *idx;$/;"	m	class:indexEle
+index	kthread.h	/^	int64_t index;$/;"	m	struct:__anon29
+index	kthread.h	/^	int64_t index;$/;"	m	struct:ktp_t
+indexEle	read_index_ele.cpp	/^indexEle::indexEle()$/;"	f	class:indexEle
+indexEle	read_index_ele.h	/^class indexEle {$/;"	c
+index_alloc	FMI_search.h	/^        int64_t index_alloc;$/;"	m	class:FMI_search
+induceSA	sais.h	/^induceSA(string_type T, sarray_type SA, bucketC_type C, bucketB_type B,$/;"	f	namespace:saisxx_private
+infer_bw	bwamem.cpp	/^static inline int infer_bw(int l1, int l2, int score, int a, int q, int r)$/;"	f	file:
+info	FMI_search.h	/^    uint64_t info; \/\/ for debug$/;"	m	struct:smem_struct
+info	bwt.h	/^	bwtint_t x[3], info;$/;"	m	struct:__anon16
+int_v	bwamem.h	/^typedef kvec_t(int) int_v;$/;"	t
+intv_lt	bwamem.cpp	43;"	d	file:
+intv_lt1	bwamem.cpp	45;"	d	file:
+is_alt	bntseq.h	/^	int32_t is_alt;$/;"	m	struct:__anon2
+is_alt	bwamem.h	/^    int n_comp:30, is_alt:2; \/\/ number of sub-alignments chained together$/;"	m	struct:mem_alnreg_t
+is_alt	bwamem.h	/^    uint32_t is_rev:1, is_alt:1, mapq:8, NM:22; \/\/ is_rev: whether on the reverse strand; mapq: mapping quality; NM: edit distance$/;"	m	struct:__anon11
+is_alt	bwamem.h	/^    uint32_t w:29, kept:2, is_alt:1;$/;"	m	struct:__anon7
+is_internal	kbtree.h	/^	int32_t is_internal:1, n:31;$/;"	m	struct:__anon20
+is_rev	bwamem.h	/^    uint32_t is_rev:1, is_alt:1, mapq:8, NM:22; \/\/ is_rev: whether on the reverse strand; mapq: mapping quality; NM: edit distance$/;"	m	struct:__anon11
+is_shm	bwa.h	/^	int    is_shm;$/;"	m	struct:__anon5
+is_shm	read_index_ele.h	/^	int    is_shm;$/;"	m	struct:__anon32
+k	FMI_search.h	/^    int64_t k, l, s;$/;"	m	struct:smem_struct
+kb_del	kbtree.h	386;"	d
+kb_delp	kbtree.h	390;"	d
+kb_destroy	kbtree.h	383;"	d
+kb_generic_cmp	kbtree.h	395;"	d
+kb_get	kbtree.h	384;"	d
+kb_getp	kbtree.h	388;"	d
+kb_init	kbtree.h	382;"	d
+kb_interval	kbtree.h	387;"	d
+kb_intervalp	kbtree.h	391;"	d
+kb_put	kbtree.h	385;"	d
+kb_putp	kbtree.h	389;"	d
+kb_size	kbtree.h	393;"	d
+kb_str_cmp	kbtree.h	396;"	d
+kbnode_t	kbtree.h	/^} kbnode_t;$/;"	t	typeref:struct:__anon20
+kbtree_t	kbtree.h	381;"	d
+kcalloc	khash.h	167;"	d
+kclose	kopen.cpp	/^int kclose(void *a)$/;"	f
+kept	bwamem.h	/^    uint32_t w:29, kept:2, is_alt:1;$/;"	m	struct:__anon7
+kfree	khash.h	176;"	d
+kftp_get_response	kopen.cpp	/^static int kftp_get_response(ftpaux_t *aux)$/;"	f	file:
+kftp_send_cmd	kopen.cpp	/^static int kftp_send_cmd(ftpaux_t *aux, const char *cmd, int is_get)$/;"	f	file:
+kh_begin	khash.h	515;"	d
+kh_clear	khash.h	441;"	d
+kh_cstr_t	khash.h	/^typedef const char *kh_cstr_t;$/;"	t
+kh_del	khash.h	478;"	d
+kh_destroy	khash.h	434;"	d
+kh_end	khash.h	522;"	d
+kh_exist	khash.h	486;"	d
+kh_foreach	khash.h	545;"	d
+kh_foreach_value	khash.h	559;"	d
+kh_get	khash.h	470;"	d
+kh_init	khash.h	427;"	d
+kh_inline	khash.h	138;"	d
+kh_inline	khash.h	140;"	d
+kh_int64_hash_equal	khash.h	377;"	d
+kh_int64_hash_func	khash.h	373;"	d
+kh_int_hash_equal	khash.h	367;"	d
+kh_int_hash_func	khash.h	363;"	d
+kh_int_hash_func2	khash.h	410;"	d
+kh_key	khash.h	494;"	d
+kh_n_buckets	khash.h	536;"	d
+kh_put	khash.h	461;"	d
+kh_resize	khash.h	449;"	d
+kh_size	khash.h	529;"	d
+kh_str_hash_equal	khash.h	398;"	d
+kh_str_hash_func	khash.h	394;"	d
+kh_val	khash.h	503;"	d
+kh_value	khash.h	508;"	d
+khash_t	khash.h	420;"	d
+khint32_t	khash.h	/^typedef unsigned int khint32_t;$/;"	t
+khint32_t	khash.h	/^typedef unsigned long khint32_t;$/;"	t
+khint64_t	khash.h	/^typedef unsigned long khint64_t;$/;"	t
+khint64_t	khash.h	/^typedef unsigned long long khint64_t;$/;"	t
+khint_t	khash.h	/^typedef khint32_t khint_t;$/;"	t
+khiter_t	khash.h	/^typedef khint_t khiter_t;$/;"	t
+kmalloc	khash.h	170;"	d
+koaux_t	kopen.cpp	/^} koaux_t;$/;"	t	typeref:struct:__anon23	file:
+kopen	kopen.cpp	/^void *kopen(const char *fn, int *_fd)$/;"	f
+kputc	kstring.h	/^static inline int kputc(int c, kstring_t *s)$/;"	f
+kputl	kstring.h	/^static inline int kputl(long c, kstring_t *s)$/;"	f
+kputs	kstring.h	/^static inline int kputs(const char *p, kstring_t *s)$/;"	f
+kputsn	kstring.h	/^static inline int kputsn(const char *p, int l, kstring_t *s)$/;"	f
+kputuw	kstring.h	/^static inline int kputuw(unsigned c, kstring_t *s)$/;"	f
+kputw	kstring.h	/^static inline int kputw(int c, kstring_t *s)$/;"	f
+krealloc	khash.h	173;"	d
+kroundup32	khash.h	163;"	d
+kroundup32	kseq.h	98;"	d
+kroundup32	kstring.h	42;"	d
+ks	fastmap.h	/^	kseq_t *ks, *ks2;$/;"	m	struct:__anon18
+ks2	fastmap.h	/^	kseq_t *ks, *ks2;$/;"	m	struct:__anon18
+ks_combsort	ksort.h	269;"	d
+ks_eof	kseq.h	56;"	d
+ks_heapadjust	ksort.h	272;"	d
+ks_heapmake	ksort.h	271;"	d
+ks_heapsort	ksort.h	270;"	d
+ks_introsort	ksort.h	268;"	d
+ks_isort_stack_t	ksort.h	/^} ks_isort_stack_t;$/;"	t	typeref:struct:__anon24
+ks_ksmall	ksort.h	273;"	d
+ks_lt_generic	ksort.h	275;"	d
+ks_lt_str	ksort.h	276;"	d
+ks_mergesort	ksort.h	267;"	d
+ks_resize	kstring.h	/^static inline void ks_resize(kstring_t *s, size_t size)$/;"	f
+ks_rewind	kseq.h	57;"	d
+kseq2bseq1	bwa.cpp	/^static inline void kseq2bseq1(const kseq_t *ks, bseq1_t *s)$/;"	f	file:
+kseq_rewind	kseq.h	161;"	d
+ksprintf	kstring.cpp	/^int ksprintf(kstring_t *s, const char *fmt, ...)$/;"	f
+ksstr_t	ksort.h	/^typedef const char *ksstr_t;$/;"	t
+kstring_t	kseq.h	/^} kstring_t;$/;"	t	typeref:struct:__kstring_t
+kstring_t	kstring.h	/^} kstring_t;$/;"	t	typeref:struct:__kstring_t
+ksw_align	ksw.cpp	/^kswr_t ksw_align(int qlen, uint8_t *query, int tlen, uint8_t *target, int m, const int8_t *mat, int gapo, int gape, int xtra, kswq_t **qry)$/;"	f
+ksw_align2	ksw.cpp	/^kswr_t ksw_align2(int qlen, uint8_t *query, int tlen, uint8_t *target,$/;"	f
+ksw_align2_orig_bak	ksw.cpp	/^kswr_t ksw_align2_orig_bak(int qlen, uint8_t *query, int tlen, uint8_t *target,$/;"	f
+ksw_extend	ksw.cpp	/^int ksw_extend(int qlen, const uint8_t *query, int tlen, const uint8_t *target, int m, const int8_t *mat, int gapo, int gape, int w, int end_bonus, int zdrop, int h0, int *qle, int *tle, int *gtle, int *gscore, int *max_off)$/;"	f
+ksw_extend2	ksw.cpp	/^int ksw_extend2(int qlen, const uint8_t *query, int tlen, const uint8_t *target, int m, const int8_t *mat, int o_del, int e_del, int o_ins, int e_ins, int w, int end_bonus, int zdrop, int h0, int *_qle, int *_tle, int *_gtle, int *_gscore, int *_max_off)$/;"	f
+ksw_global	ksw.cpp	/^int ksw_global(int qlen, const uint8_t *query, int tlen, const uint8_t *target, int m, const int8_t *mat, int gapo, int gape, int w, int *n_cigar_, uint32_t **cigar_)$/;"	f
+ksw_global2	ksw.cpp	/^int ksw_global2(int qlen, const uint8_t *query, int tlen, const uint8_t *target, int m, const int8_t *mat, int o_del, int e_del, int o_ins, int e_ins, int w, int *n_cigar_, uint32_t **cigar_)$/;"	f
+ksw_i16	ksw.cpp	/^kswr_t ksw_i16(kswq_t *q, int tlen, const uint8_t *target, int _o_del, int _e_del, int _o_ins, int _e_ins, int xtra) \/\/ the first gap costs -(_o+_e)$/;"	f
+ksw_qinit	ksw.cpp	/^kswq_t *ksw_qinit(int size, int qlen, const uint8_t *query, int m, const int8_t *mat)$/;"	f
+ksw_qinit	kswv.cpp	/^kswq_t* kswv::ksw_qinit(int size, int qlen, uint8_t *query, int m, const int8_t *mat)$/;"	f	class:kswv
+ksw_u8	ksw.cpp	/^kswr_t ksw_u8(kswq_t *q, int tlen, const uint8_t *target,$/;"	f
+kswq_t	ksw.h	/^typedef struct _kswq_t kswq_t;$/;"	t	typeref:struct:_kswq_t
+kswq_t	kswv.h	/^} kswq_t;$/;"	t	typeref:struct:__anon27
+kswr_t	ksw.h	/^} kswr_t;$/;"	t	typeref:struct:__anon26
+kswr_t	kswv.h	/^} kswr_t;$/;"	t	typeref:struct:__anon28
+kswv	kswv.cpp	/^kswv::kswv(const int o_del, const int e_del, const int o_ins,$/;"	f	class:kswv
+kswv	kswv.h	/^class kswv {$/;"	c
+kswv512_16	kswv.cpp	/^int kswv::kswv512_16(int16_t seq1SoA[],$/;"	f	class:kswv
+kswv512_u8	kswv.cpp	/^int kswv::kswv512_u8(uint8_t seq1SoA[],$/;"	f	class:kswv
+kswvBatchWrapper16	kswv.cpp	/^void kswv::kswvBatchWrapper16(SeqPair *pairArray,$/;"	f	class:kswv
+kswvBatchWrapper8	kswv.cpp	/^void kswv::kswvBatchWrapper8(SeqPair *pairArray,$/;"	f	class:kswv
+kswvScalarWrapper	kswv.cpp	/^void kswv::kswvScalarWrapper(SeqPair *seqPairArray,$/;"	f	class:kswv
+kswvScalar_i16	kswv.cpp	/^kswr_t kswv::kswvScalar_i16(kswq_t *q, int tlen, const uint8_t *target,$/;"	f	class:kswv
+kswvScalar_u8	kswv.cpp	/^kswr_t kswv::kswvScalar_u8(kswq_t *q, int tlen, const uint8_t *target,$/;"	f	class:kswv
+kt_for	kthread.cpp	/^void kt_for(void (*func)(void*, int, int, int), void *data, int n)$/;"	f
+kt_for_t	kthread.h	/^typedef struct kt_for_t {$/;"	s
+kt_for_t	kthread.h	/^} kt_for_t;$/;"	t	typeref:struct:kt_for_t
+kt_pipeline	fastmap.cpp	/^ktp_data_t *kt_pipeline(void *shared, int step, void *data, mem_opt_t *opt, worker_t &w)$/;"	f
+ktf_worker	kthread.cpp	/^static void *ktf_worker(void *data)$/;"	f	file:
+ktf_worker_t	kthread.h	/^} ktf_worker_t;$/;"	t	typeref:struct:__anon30
+ktp_aux_t	fastmap.h	/^} ktp_aux_t;$/;"	t	typeref:struct:__anon18
+ktp_data_t	fastmap.h	/^} ktp_data_t;$/;"	t	typeref:struct:__anon19
+ktp_t	kthread.h	/^typedef struct ktp_t {$/;"	s
+ktp_t	kthread.h	/^} ktp_t;$/;"	t	typeref:struct:ktp_t
+ktp_worker	fastmap.cpp	/^static void *ktp_worker(void *data)$/;"	f	file:
+ktp_worker_t	kthread.h	/^} ktp_worker_t;$/;"	t	typeref:struct:__anon29
+kv_A	kvec.h	66;"	d
+kv_a	kvec.h	92;"	d
+kv_copy	kvec.h	73;"	d
+kv_destroy	kvec.h	65;"	d
+kv_init	kvec.h	64;"	d
+kv_max	kvec.h	69;"	d
+kv_pop	kvec.h	67;"	d
+kv_push	kvec.h	79;"	d
+kv_pushp	kvec.h	87;"	d
+kv_resize	kvec.h	71;"	d
+kv_roundup32	kvec.h	57;"	d
+kv_size	kvec.h	68;"	d
+kvec_t	kvec.h	63;"	d
+kvecint	kvec.h	/^}  kvecint;$/;"	t	typeref:struct:__anon31
+l	FMI_search.h	/^    int64_t k, l, s;$/;"	m	struct:smem_struct
+l	kseq.h	/^	size_t l, m;$/;"	m	struct:__kstring_t
+l	kstring.h	/^	size_t l, m;$/;"	m	struct:__kstring_t
+l_mem	bwa.h	/^	int64_t l_mem;$/;"	m	struct:__anon5
+l_mem	read_index_ele.h	/^	int64_t l_mem;$/;"	m	struct:__anon32
+l_pac	bntseq.h	/^	int64_t l_pac;$/;"	m	struct:__anon4
+l_seq	bwa.h	/^	int l_seq, id;$/;"	m	struct:__anon6
+left	ksort.h	/^	void *left, *right;$/;"	m	struct:__anon24
+len	bntseq.h	/^	int32_t len;$/;"	m	struct:__anon2
+len	bntseq.h	/^	int32_t len;$/;"	m	struct:__anon3
+len	bwamem.h	/^    int32_t len;$/;"	m	struct:abc
+len1	bandedSWA.h	/^    int32_t len1, len2;$/;"	m	struct:dnaSeqPair
+len1	kswv.h	/^	int32_t len1, len2;$/;"	m	struct:dnaSeqPair
+len2	bandedSWA.h	/^    int32_t len1, len2;$/;"	m	struct:dnaSeqPair
+len2	kswv.h	/^	int32_t len1, len2;$/;"	m	struct:dnaSeqPair
+lim	bwamem.h	/^    int32_t *lim[MAX_THREADS];$/;"	m	struct:__anon13
+loadPairs	kswv.cpp	/^int loadPairs(SeqPair *seqPairArray, uint8_t *seqBufRef, uint8_t* seqBufQer, FILE *pairFile)$/;"	f
+load_index	FMI_search.cpp	/^void FMI_search::load_index()$/;"	f	class:FMI_search
+low	bwamem.h	/^    int low, high;   \/\/ lower and upper bounds within which a read pair is considered to be properly paired$/;"	m	struct:__anon10
+m	FMI_search.h	/^    uint32_t m, n;$/;"	m	struct:smem_struct
+m	bandedSWA.h	/^    int m;$/;"	m	class:BandedPairWiseSW
+m	bwamem.h	/^    int32_t n, m, first, rid;$/;"	m	struct:__anon7
+m	bwamem.h	/^typedef struct { size_t n, m, cc; mem_chain_t *a;  } mem_chain_v;$/;"	m	struct:__anon8
+m	bwamem.h	/^typedef struct { size_t n, m; mem_alnreg_t *a; } mem_alnreg_v;$/;"	m	struct:__anon9
+m	bwt.h	/^typedef struct { size_t n, m; bwtintv_t *a; } bwtintv_v;$/;"	m	struct:__anon17
+m	kseq.h	/^	size_t l, m;$/;"	m	struct:__kstring_t
+m	kstring.h	/^	size_t l, m;$/;"	m	struct:__kstring_t
+m	kswv.h	/^	int m;$/;"	m	class:kswv
+m	kvec.h	/^	size_t n,m;$/;"	m	struct:__anon31
+m	utils.h	/^typedef struct { size_t n, m; pair64_t *a; } pair64_v;$/;"	m	struct:__anon35
+m	utils.h	/^typedef struct { size_t n, m; uint64_t *a; } uint64_v;$/;"	m	struct:__anon34
+main	kopen.cpp	/^int main(int argc, char *argv[])$/;"	f
+main	kstring.cpp	/^int main()$/;"	f
+main	ksw.cpp	/^int main(int argc, char *argv[])$/;"	f
+main	kswv.cpp	/^int main(int argc, char *argv[])$/;"	f
+main	main.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	runsimd.cpp	/^int main(int argc, char *argv[])$/;"	f
+main_mem	fastmap.cpp	/^int main_mem(int argc, char *argv[])$/;"	f
+mapQ_coef_fac	bwamem.h	/^    int mapQ_coef_fac;$/;"	m	struct:mem_opt_t
+mapQ_coef_len	bwamem.h	/^    float mapQ_coef_len;$/;"	m	struct:mem_opt_t
+mapq	bwamem.h	/^    uint32_t is_rev:1, is_alt:1, mapq:8, NM:22; \/\/ is_rev: whether on the reverse strand; mapq: mapping quality; NM: edit distance$/;"	m	struct:__anon11
+mask_level	bwamem.h	/^    float mask_level;       \/\/ regard a hit as redundant if the overlap with another better hit is over mask_level times the min length of the two hits$/;"	m	struct:mem_opt_t
+mask_level_redun	bwamem.h	/^    float mask_level_redun;$/;"	m	struct:mem_opt_t
+mat	bandedSWA.h	/^    const int8_t *mat;$/;"	m	class:BandedPairWiseSW
+mat	bwamem.h	/^    int8_t mat[25];         \/\/ scoring matrix; mat[0] == 0 if unset$/;"	m	struct:mem_opt_t
+matchArray	bwamem.h	/^    SMEM *matchArray[MAX_THREADS];$/;"	m	struct:__anon13
+max	ksw.h	/^	uint8_t shift, mdiff, max, size;$/;"	m	struct:_kswq_t
+max	kswv.h	/^	uint8_t shift, mdiff, max, size;$/;"	m	struct:__anon27
+max	kswv.h	75;"	d
+maxQerLen	kswv.h	/^	int32_t maxRefLen, maxQerLen;$/;"	m	class:kswv
+maxRefLen	kswv.h	/^	int32_t maxRefLen, maxQerLen;$/;"	m	class:kswv
+max_	bandedSWA.h	88;"	d
+max_	bwamem.cpp	48;"	d	file:
+max_XA_hits	bwamem.h	/^    int max_XA_hits, max_XA_hits_alt; \/\/ if there are max_hits or fewer, output them all$/;"	m	struct:mem_opt_t
+max_XA_hits_alt	bwamem.h	/^    int max_XA_hits, max_XA_hits_alt; \/\/ if there are max_hits or fewer, output them all$/;"	m	struct:mem_opt_t
+max_chain_extend	bwamem.h	/^    int max_chain_extend;$/;"	m	struct:mem_opt_t
+max_chain_gap	bwamem.h	/^    int max_chain_gap;      \/\/ do not chain seed if it is max_chain_gap-bp away from the closest seed$/;"	m	struct:mem_opt_t
+max_ins	bwamem.h	/^    int max_ins;            \/\/ when estimating insert size distribution, skip pairs with insert longer than this value$/;"	m	struct:mem_opt_t
+max_matesw	bwamem.h	/^    int max_matesw;         \/\/ perform maximally max_matesw rounds of mate-SW for each end$/;"	m	struct:mem_opt_t
+max_mem_intv	bwamem.h	/^    uint64_t max_mem_intv;$/;"	m	struct:mem_opt_t
+max_occ	bwamem.h	/^    int max_occ;            \/\/ skip a seed if its occurence is larger than this value$/;"	m	struct:mem_opt_t
+max_off	bandedSWA.h	/^    int32_t gscore, max_off;$/;"	m	struct:dnaOutScore
+max_off	bandedSWA.h	/^    int32_t gscore, max_off;$/;"	m	struct:dnaSeqPair
+max_response	kopen.cpp	/^	int max_response, ctrl_fd;$/;"	m	struct:__anon22	file:
+mdiff	ksw.h	/^	uint8_t shift, mdiff, max, size;$/;"	m	struct:_kswq_t
+mdiff	kswv.h	/^	uint8_t shift, mdiff, max, size;$/;"	m	struct:__anon27
+mem	bwa.h	/^	uint8_t  *mem;$/;"	m	struct:__anon5
+mem	bwamem.h	/^    bwtintv_v mem, mem1, *tmpv[2];$/;"	m	struct:__anon12
+mem	read_index_ele.h	/^	uint8_t  *mem;$/;"	m	struct:__anon32
+mem1	bwamem.h	/^    bwtintv_v mem, mem1, *tmpv[2];$/;"	m	struct:__anon12
+mem_aln2sam	bwamem.cpp	/^void mem_aln2sam(const mem_opt_t *opt, const bntseq_t *bns, kstring_t *str,$/;"	f
+mem_aln_t	bwamem.h	/^} mem_aln_t;$/;"	t	typeref:struct:__anon11
+mem_alnreg_t	bwamem.h	/^typedef struct mem_alnreg_t {$/;"	s
+mem_alnreg_t	bwamem.h	/^} mem_alnreg_t;$/;"	t	typeref:struct:mem_alnreg_t
+mem_alnreg_v	bwamem.h	/^typedef struct { size_t n, m; mem_alnreg_t *a; } mem_alnreg_v;$/;"	t	typeref:struct:__anon9
+mem_approx_mapq_se	bwamem.cpp	/^int mem_approx_mapq_se(const mem_opt_t *opt, const mem_alnreg_t *a)$/;"	f
+mem_cache	bwamem.h	/^} mem_cache;$/;"	t	typeref:struct:__anon13
+mem_chain2aln_across_reads_V2	bwamem.cpp	/^void mem_chain2aln_across_reads_V2(const mem_opt_t *opt, const bntseq_t *bns,$/;"	f
+mem_chain_flt	bwamem.cpp	/^int mem_chain_flt(const mem_opt_t *opt, int n_chn_, mem_chain_t *a_, int tid)$/;"	f
+mem_chain_seeds	bwamem.cpp	/^void mem_chain_seeds(FMI_search *fmi, const mem_opt_t *opt,$/;"	f
+mem_chain_t	bwamem.h	/^} mem_chain_t;$/;"	t	typeref:struct:__anon7
+mem_chain_v	bwamem.h	/^typedef struct { size_t n, m, cc; mem_chain_t *a;  } mem_chain_v;$/;"	t	typeref:struct:__anon8
+mem_chain_weight	bwamem.cpp	/^int mem_chain_weight(const mem_chain_t *c)$/;"	f
+mem_collect_smem	bwamem.cpp	/^SMEM *mem_collect_smem(FMI_search *fmi, const mem_opt_t *opt,$/;"	f
+mem_dedup_patch	bwamem.cpp	/^int mem_dedup_patch(const mem_opt_t *opt, const bntseq_t *bns,$/;"	f
+mem_flt_chained_seeds	bwamem.cpp	/^void mem_flt_chained_seeds(const mem_opt_t *opt, const bntseq_t *bns, const uint8_t *pac,$/;"	f
+mem_gen_alt	bwamem_extra.cpp	/^char **mem_gen_alt(const mem_opt_t *opt, const bntseq_t *bns, const uint8_t *pac, const mem_alnreg_v *a, int l_query, const char *query) \/\/ ONLY work after mem_mark_primary_se()$/;"	f
+mem_infer_dir	bwamem_pair.cpp	/^static inline int mem_infer_dir(int64_t l_pac, int64_t b1, int64_t b2, int64_t *dist)$/;"	f	file:
+mem_kernel1_core	bwamem.cpp	/^int mem_kernel1_core(FMI_search *fmi,$/;"	f
+mem_kernel2_core	bwamem.cpp	/^int mem_kernel2_core(FMI_search *fmi,$/;"	f
+mem_mark_primary_se	bwamem.cpp	/^int mem_mark_primary_se(const mem_opt_t *opt, int n, mem_alnreg_t *a, int64_t id)$/;"	f
+mem_mark_primary_se_core	bwamem.cpp	/^static void mem_mark_primary_se_core(const mem_opt_t *opt, int n, mem_alnreg_t *a, int_v *z)$/;"	f	file:
+mem_matesw	bwamem_pair.cpp	/^int mem_matesw(const mem_opt_t *opt, const bntseq_t *bns,$/;"	f
+mem_matesw_batch_post	bwamem_pair.cpp	/^int mem_matesw_batch_post(const mem_opt_t *opt, const bntseq_t *bns,$/;"	f
+mem_matesw_batch_pre	bwamem_pair.cpp	/^int mem_matesw_batch_pre(const mem_opt_t *opt, const bntseq_t *bns,$/;"	f
+mem_opt_init	bwamem.cpp	/^mem_opt_t *mem_opt_init()$/;"	f
+mem_opt_t	bwamem.h	/^typedef struct mem_opt_t {$/;"	s
+mem_opt_t	bwamem.h	/^} mem_opt_t;$/;"	t	typeref:struct:mem_opt_t
+mem_pair	bwamem_pair.cpp	/^int mem_pair(const mem_opt_t *opt, const bntseq_t *bns, const uint8_t *pac, const mem_pestat_t pes[4], bseq1_t s[2], mem_alnreg_v a[2], int id, int *sub, int *n_sub, int z[2], int n_pri[2])$/;"	f
+mem_patch_reg	bwamem.cpp	/^int mem_patch_reg(const mem_opt_t *opt, const bntseq_t *bns, const uint8_t *pac,$/;"	f
+mem_pestat	bwamem_pair.cpp	/^void mem_pestat(const mem_opt_t *opt, int64_t l_pac, int n,$/;"	f
+mem_pestat_t	bwamem.h	/^} mem_pestat_t;$/;"	t	typeref:struct:__anon10
+mem_print_chain	bwamem.cpp	/^void mem_print_chain(const bntseq_t *bns, mem_chain_v *chn)$/;"	f
+mem_process_seqs	bwamem.cpp	/^void mem_process_seqs(mem_opt_t *opt,$/;"	f
+mem_reg2aln	bwamem.cpp	/^mem_aln_t mem_reg2aln(const mem_opt_t *opt, const bntseq_t *bns, const uint8_t *pac, int l_query, const char *query_, const mem_alnreg_t *ar)$/;"	f
+mem_reg2sam	bwamem.cpp	/^void mem_reg2sam(const mem_opt_t *opt, const bntseq_t *bns, const uint8_t *pac,$/;"	f
+mem_reorder_primary5	bwamem.cpp	/^void mem_reorder_primary5(int T, mem_alnreg_v *a)$/;"	f
+mem_sam_pe	bwamem_pair.cpp	/^int mem_sam_pe(const mem_opt_t *opt, const bntseq_t *bns,$/;"	f
+mem_sam_pe_batch	bwamem_pair.cpp	/^int mem_sam_pe_batch(const mem_opt_t *opt, mem_cache *mmc,$/;"	f
+mem_sam_pe_batch_post	bwamem_pair.cpp	/^int mem_sam_pe_batch_post(const mem_opt_t *opt, const bntseq_t *bns,$/;"	f
+mem_sam_pe_batch_pre	bwamem_pair.cpp	/^int mem_sam_pe_batch_pre(const mem_opt_t *opt, const bntseq_t *bns,$/;"	f
+mem_seed_sw	bwamem.cpp	/^int mem_seed_sw(const mem_opt_t *opt, const bntseq_t *bns, const uint8_t *pac,$/;"	f
+mem_seed_t	bwamem.h	/^} mem_seed_t; \/\/ unaligned memory$/;"	t	typeref:struct:abc
+mem_sort_dedup_patch	bwamem.cpp	/^int mem_sort_dedup_patch(const mem_opt_t *opt, const bntseq_t *bns,$/;"	f
+memcpy_bwamem	memcpy_bwamem.cpp	/^errno_t memcpy_bwamem(void *dest, rsize_t dmax, const void *src, rsize_t smax, char *file_name, int line_num)$/;"	f
+memoryAlloc	fastmap.cpp	/^void memoryAlloc(ktp_aux_t *aux, worker_t &w, int32_t nreads, int32_t nthreads)$/;"	f
+min	kswv.h	76;"	d
+min_	bandedSWA.h	87;"	d
+min_	bwamem.cpp	49;"	d	file:
+min_chain_weight	bwamem.h	/^    int min_chain_weight;$/;"	m	struct:mem_opt_t
+min_intv_ar	bwamem.h	/^    int32_t *min_intv_ar[MAX_THREADS];$/;"	m	struct:__anon13
+min_seed_len	bwamem.h	/^    int min_seed_len;       \/\/ minimum seed length$/;"	m	struct:mem_opt_t
+mmc	bwamem.h	/^    mem_cache         mmc;$/;"	m	struct:worker_t
+mutex	kthread.h	/^	pthread_mutex_t mutex;$/;"	m	struct:ktp_t
+my_ntasks	fastmap.h	/^	int64_t my_ntasks;$/;"	m	struct:__anon18
+n	FMI_search.h	/^    uint32_t m, n;$/;"	m	struct:smem_struct
+n	bwamem.h	/^    int32_t n, m, first, rid;$/;"	m	struct:__anon7
+n	bwamem.h	/^typedef struct { size_t n, m, cc; mem_chain_t *a;  } mem_chain_v;$/;"	m	struct:__anon8
+n	bwamem.h	/^typedef struct { size_t n, m; mem_alnreg_t *a; } mem_alnreg_v;$/;"	m	struct:__anon9
+n	bwt.h	/^typedef struct { size_t n, m; bwtintv_t *a; } bwtintv_v;$/;"	m	struct:__anon17
+n	kbtree.h	/^	int32_t is_internal:1, n:31;$/;"	m	struct:__anon20
+n	kthread.h	/^	long n;$/;"	m	struct:kt_for_t
+n	kvec.h	/^	size_t n,m;$/;"	m	struct:__anon31
+n	utils.h	/^typedef struct { size_t n, m; pair64_t *a; } pair64_v;$/;"	m	struct:__anon35
+n	utils.h	/^typedef struct { size_t n, m; uint64_t *a; } uint64_v;$/;"	m	struct:__anon34
+n_ambs	bntseq.h	/^	int32_t n_ambs;$/;"	m	struct:__anon2
+n_cigar	bwamem.h	/^    int n_cigar;     \/\/ number of CIGAR operations$/;"	m	struct:__anon11
+n_comp	bwamem.h	/^    int n_comp:30, is_alt:2; \/\/ number of sub-alignments chained together$/;"	m	struct:mem_alnreg_t
+n_holes	bntseq.h	/^	int32_t n_holes;$/;"	m	struct:__anon4
+n_processed	bwamem.h	/^    int64_t           n_processed;$/;"	m	struct:worker_t
+n_processed	fastmap.h	/^	int64_t n_processed;$/;"	m	struct:__anon18
+n_sa	bwt.h	/^	bwtint_t n_sa;$/;"	m	struct:__anon14
+n_seqs	bntseq.h	/^	int32_t n_seqs;$/;"	m	struct:__anon4
+n_seqs	fastmap.h	/^	int n_seqs;$/;"	m	struct:__anon19
+n_steps	kthread.h	/^	int n_workers, n_steps;$/;"	m	struct:ktp_t
+n_threads	bwamem.h	/^    int n_threads;          \/\/ number of threads$/;"	m	struct:mem_opt_t
+n_threads	kthread.h	/^	int n_threads;$/;"	m	struct:kt_for_t
+n_workers	kthread.h	/^	int n_workers, n_steps;$/;"	m	struct:ktp_t
+name	bntseq.h	/^	char *name, *anno;$/;"	m	struct:__anon2
+name	bwa.h	/^	char *name, *comment, *seq, *qual, *sam;$/;"	m	struct:__anon6
+nreads	bwamem.h	/^    int32_t           nreads;$/;"	m	struct:worker_t
+nst_nt4_table	bntseq.cpp	/^unsigned char nst_nt4_table[256] = {$/;"	v
+ntasks	fastmap.h	/^	int64_t ntasks;$/;"	m	struct:__anon18
+nthreads	bwamem.h	/^    int16_t           nthreads;$/;"	m	struct:worker_t
+o_del	bandedSWA.h	/^    int o_del, o_ins, e_del, e_ins;$/;"	m	class:BandedPairWiseSW
+o_del	bwamem.h	/^    int o_del, e_del;$/;"	m	struct:mem_opt_t
+o_del	kswv.h	/^	int o_del, o_ins, e_del, e_ins;$/;"	m	class:kswv
+o_ins	bandedSWA.h	/^    int o_del, o_ins, e_del, e_ins;$/;"	m	class:BandedPairWiseSW
+o_ins	bwamem.h	/^    int o_ins, e_ins;$/;"	m	struct:mem_opt_t
+o_ins	kswv.h	/^	int o_del, o_ins, e_del, e_ins;$/;"	m	class:kswv
+occ	bwt.h	/^	uint32_t *occ;$/;"	m	struct:__anon15
+offset	bntseq.h	/^	int64_t offset;$/;"	m	struct:__anon2
+offset	bntseq.h	/^	int64_t offset;$/;"	m	struct:__anon3
+one_hot_bwt_str	FMI_search.h	/^    uint64_t one_hot_bwt_str[4];$/;"	m	struct:checkpoint_occ_scalar
+one_hot_mask_array	FMI_search.h	/^        uint64_t *one_hot_mask_array;$/;"	m	class:FMI_search
+opt	bwamem.h	/^    const mem_opt_t      *opt;$/;"	m	struct:worker_t
+opt	fastmap.h	/^	mem_opt_t *opt;$/;"	m	struct:__anon18
+opt	kthread.h	/^	mem_opt_t *opt;$/;"	m	struct:__anon29
+pac	bwa.h	/^	uint8_t  *pac; \/\/ the actual 2-bit encoded reference sequences with 'N' converted to a random base$/;"	m	struct:__anon5
+pac	read_index_ele.h	/^	uint8_t  *pac; \/\/ the actual 2-bit encoded reference sequences with 'N' converted to a random base$/;"	m	struct:__anon32
+pac2nt	FMI_search.cpp	/^void FMI_search::pac2nt(const char *fn_pac, std::string &reference_seq)$/;"	f	class:FMI_search
+pac_seq_len	FMI_search.cpp	/^int64_t FMI_search::pac_seq_len(const char *fn_pac)$/;"	f	class:FMI_search
+pair64_lt	utils.cpp	45;"	d	file:
+pair64_t	utils.h	/^} pair64_t;$/;"	t	typeref:struct:__anon33
+pair64_v	utils.h	/^typedef struct { size_t n, m; pair64_t *a; } pair64_v;$/;"	t	typeref:struct:__anon35
+pairFile	kswv.cpp	/^FILE *pairFile;$/;"	v
+pairFileName	kswv.cpp	/^char *pairFileName;$/;"	v
+parseCmdLine	kswv.cpp	/^void parseCmdLine(int argc, char *argv[])$/;"	f
+pen_clip3	bwamem.h	/^    int pen_clip5,pen_clip3;\/\/ clipping penalty. This score is not deducted from the DP score.$/;"	m	struct:mem_opt_t
+pen_clip5	bwamem.h	/^    int pen_clip5,pen_clip3;\/\/ clipping penalty. This score is not deducted from the DP score.$/;"	m	struct:mem_opt_t
+pen_unpaired	bwamem.h	/^    int pen_unpaired;       \/\/ phred-scaled penalty for unpaired reads$/;"	m	struct:mem_opt_t
+pes	bwamem.h	/^    const mem_pestat_t   *pes;$/;"	m	struct:worker_t
+pes0	fastmap.h	/^	mem_pestat_t *pes0;$/;"	m	struct:__anon18
+pid	kopen.cpp	/^	pid_t pid;$/;"	m	struct:__anon23	file:
+pl	kthread.h	/^	struct ktp_t *pl;$/;"	m	struct:__anon29	typeref:struct:__anon29::ktp_t
+pos	bwamem.h	/^    int64_t pos;     \/\/ forward strand 5'-end mapping position$/;"	m	struct:__anon11
+pos	bwamem.h	/^    int64_t pos;$/;"	m	struct:__anon7
+primary	bwt.h	/^	bwtint_t primary; \/\/ S^{-1}(0), or the primary index of BWT$/;"	m	struct:__anon14
+printf_	macro.h	36;"	d
+proc_freq	main.cpp	/^uint64_t proc_freq, tprof[LIM_R][LIM_C], prof[LIM_R];$/;"	v
+process	fastmap.cpp	/^static int process(void *shared, gzFile gfp, gzFile gfp2, int pipe_threads)$/;"	f	file:
+prof	kswv.cpp	/^uint64_t prof[10][112];$/;"	v
+prof	main.cpp	/^uint64_t proc_freq, tprof[LIM_R][LIM_C], prof[LIM_R];$/;"	v
+push_cigar	ksw.cpp	/^static inline uint32_t *push_cigar(int *n_cigar, int *m_cigar, uint32_t *cigar, int op, int len)$/;"	f	file:
+qb	bwamem.h	/^    int qb, qe;     \/\/ [qb,qe): query sequence in the alignment$/;"	m	struct:mem_alnreg_t
+qb	ksw.h	/^	int tb, qb; \/\/ target start and query start$/;"	m	struct:__anon26
+qb	kswv.h	/^	int tb, qb; \/\/ target start and query start$/;"	m	struct:__anon28
+qb	kswv.h	/^	int tb, qb; \/\/ target start and query start$/;"	m	struct:dnaSeqPair
+qbeg	bwamem.h	/^    int32_t qbeg;$/;"	m	struct:abc
+qe	bwamem.h	/^    int qb, qe;     \/\/ [qb,qe): query sequence in the alignment$/;"	m	struct:mem_alnreg_t
+qe	ksw.h	/^	int te, qe; \/\/ target end and query end$/;"	m	struct:__anon26
+qe	kswv.h	/^	int te, qe; \/\/ target end and query end$/;"	m	struct:__anon28
+qe	kswv.h	/^	int te, qe; \/\/ target end and query end$/;"	m	struct:dnaSeqPair
+qle	bandedSWA.h	/^    int32_t score, tle, gtle, qle;$/;"	m	struct:dnaOutScore
+qle	bandedSWA.h	/^    int32_t score, tle, gtle, qle;$/;"	m	struct:dnaSeqPair
+qlen	ksw.h	/^	int qlen, slen;$/;"	m	struct:_kswq_t
+qlen	kswv.h	/^	int qlen, slen;$/;"	m	struct:__anon27
+qp	ksw.h	/^	__m128i *qp, *H0, *H1, *E, *Hmax;$/;"	m	struct:_kswq_t
+qp	kswv.h	/^	__m128i *qp, *H0, *H1, *E, *Hmax;$/;"	m	struct:__anon27
+qual	bwa.h	/^	char *name, *comment, *seq, *qual, *sam;$/;"	m	struct:__anon6
+query_pos_ar	bwamem.h	/^    int16_t *query_pos_ar[MAX_THREADS];$/;"	m	struct:__anon13
+raw_mapq	bwamem_pair.cpp	350;"	d	file:
+rb	bwamem.h	/^    int64_t rb, re; \/\/ [rb,re): reference sequence in the alignment$/;"	m	struct:mem_alnreg_t
+rbeg	bwamem.h	/^    int64_t rbeg;$/;"	m	struct:abc
+re	bwamem.h	/^    int64_t rb, re; \/\/ [rb,re): reference sequence in the alignment$/;"	m	struct:mem_alnreg_t
+realtime	utils.cpp	/^double realtime()$/;"	f
+ref_string	bwamem.h	/^    uint8_t          *ref_string;$/;"	m	struct:worker_t
+ref_string	fastmap.h	/^	uint8_t *ref_string;$/;"	m	struct:__anon18
+reference_seq_len	FMI_search.h	/^    int64_t reference_seq_len;$/;"	m	class:FMI_search
+regid	bandedSWA.h	/^    int seqid, regid;$/;"	m	struct:dnaSeqPair
+regid	kswv.h	/^	int seqid, regid;$/;"	m	struct:dnaSeqPair
+regs	bwamem.h	/^    mem_alnreg_v     *regs;$/;"	m	struct:worker_t
+response	kopen.cpp	/^	char *response;$/;"	m	struct:__anon22	file:
+revseq	bwamem_pair.cpp	/^static inline void revseq(int l, uint8_t *s)$/;"	f	file:
+revseq	ksw.cpp	/^static inline void revseq(int l, uint8_t *s)$/;"	f	file:
+rid	FMI_search.h	/^    uint32_t rid;$/;"	m	struct:smem_struct
+rid	bwamem.h	/^    int rid;         \/\/ reference sequence index in bntseq_t; <0 for unmapped$/;"	m	struct:__anon11
+rid	bwamem.h	/^    int rid;        \/\/ reference seq ID$/;"	m	struct:mem_alnreg_t
+rid	bwamem.h	/^    int32_t *rid[MAX_THREADS];$/;"	m	struct:__anon13
+rid	bwamem.h	/^    int32_t n, m, first, rid;$/;"	m	struct:__anon7
+right	ksort.h	/^	void *left, *right;$/;"	m	struct:__anon24
+rowMax16	kswv.h	/^	int16_t *rowMax16;$/;"	m	class:kswv
+rowMax8	kswv.h	/^	uint8_t *rowMax8;$/;"	m	class:kswv
+s	FMI_search.h	/^    int64_t k, l, s;$/;"	m	struct:smem_struct
+s	kseq.h	/^	char *s;$/;"	m	struct:__kstring_t
+s	kstring.h	/^	char *s;$/;"	m	struct:__kstring_t
+sa	bwt.h	/^	bwtint_t *sa;$/;"	m	struct:__anon14
+sa	bwt.h	/^	uint32_t *sa;$/;"	m	struct:__anon15
+sa_intv	bwt.h	/^	int sa_intv;$/;"	m	struct:__anon14
+sa_ls_word	FMI_search.h	/^        uint32_t *sa_ls_word;$/;"	m	class:FMI_search
+sa_ms_byte	FMI_search.h	/^        int8_t *sa_ms_byte;$/;"	m	class:FMI_search
+saisxx	sais.h	/^saisxx(string_type T, sarray_type SA, index_type n, index_type k = 256) {$/;"	f
+saisxx_bwt	sais.h	/^saisxx_bwt(string_type T, string_type U, sarray_type A, index_type n, index_type k = 256) {$/;"	f
+saisxx_private	sais.h	/^namespace saisxx_private {$/;"	n
+sam	bwa.h	/^	char *name, *comment, *seq, *qual, *sam;$/;"	m	struct:__anon6
+scalarBandedSWA	bandedSWA.cpp	/^int BandedPairWiseSW::scalarBandedSWA(int qlen, const uint8_t *query,$/;"	f	class:BandedPairWiseSW
+scalarBandedSWAWrapper	bandedSWA.cpp	/^void BandedPairWiseSW::scalarBandedSWAWrapper(SeqPair *seqPairArray,$/;"	f	class:BandedPairWiseSW
+score	bandedSWA.h	/^    int32_t score, tle, gtle, qle;$/;"	m	struct:dnaOutScore
+score	bandedSWA.h	/^    int32_t score, tle, gtle, qle;$/;"	m	struct:dnaSeqPair
+score	bwamem.h	/^    int score, sub, alt_sc;$/;"	m	struct:__anon11
+score	bwamem.h	/^    int score;      \/\/ best local SW score$/;"	m	struct:mem_alnreg_t
+score	bwamem.h	/^    int32_t score;$/;"	m	struct:abc
+score	ksw.h	/^	int score; \/\/ best score$/;"	m	struct:__anon26
+score	kswv.h	/^	int score; \/\/ best score$/;"	m	struct:__anon28
+score	kswv.h	/^	int score; \/\/ best score$/;"	m	struct:dnaSeqPair
+score2	ksw.h	/^	int score2, te2; \/\/ second best score and ending position on the target$/;"	m	struct:__anon26
+score2	kswv.h	/^	int score2, te2; \/\/ second best score and ending position on the target$/;"	m	struct:__anon28
+score2	kswv.h	/^	int score2, te2; \/\/ second best score and ending position on the target$/;"	m	struct:dnaSeqPair
+secondary	bwamem.h	/^    int secondary;  \/\/ index of the parent hit shadowing the current hit; <0 if primary$/;"	m	struct:mem_alnreg_t
+secondary_all	bwamem.h	/^    int secondary_all;$/;"	m	struct:mem_alnreg_t
+seed	bntseq.h	/^	uint32_t seed;$/;"	m	struct:__anon4
+seedBuf	bwamem.h	/^    mem_seed_t       *seedBuf;$/;"	m	struct:worker_t
+seedBufSize	bwamem.h	/^    int64_t           seedBufSize;$/;"	m	struct:worker_t
+seedcov	bwamem.h	/^    int seedcov;    \/\/ length of regions coverged by seeds$/;"	m	struct:mem_alnreg_t
+seedlen0	bwamem.h	/^    int seedlen0;   \/\/ length of the starting seed$/;"	m	struct:mem_alnreg_t
+seeds	bwamem.h	/^    mem_seed_t *seeds;$/;"	m	struct:__anon7
+sentinel_index	FMI_search.h	/^    int64_t sentinel_index;$/;"	m	class:FMI_search
+sentinel_index	bwt.h	/^	uint32_t sentinel_index;$/;"	m	struct:__anon15
+seq	bwa.h	/^	char *name, *comment, *seq, *qual, *sam;$/;"	m	struct:__anon6
+seqBufLeftQer	bwamem.h	/^    uint8_t *seqBufLeftQer[MAX_THREADS*CACHE_LINE];$/;"	m	struct:__anon13
+seqBufLeftRef	bwamem.h	/^    uint8_t *seqBufLeftRef[MAX_THREADS*CACHE_LINE];$/;"	m	struct:__anon13
+seqBufRightQer	bwamem.h	/^    uint8_t *seqBufRightQer[MAX_THREADS*CACHE_LINE];    $/;"	m	struct:__anon13
+seqBufRightRef	bwamem.h	/^    uint8_t *seqBufRightRef[MAX_THREADS*CACHE_LINE];$/;"	m	struct:__anon13
+seqPairArrayAux	bwamem.h	/^    SeqPair *seqPairArrayAux[MAX_THREADS];$/;"	m	struct:__anon13
+seqPairArrayLeft128	bwamem.h	/^    SeqPair *seqPairArrayLeft128[MAX_THREADS];$/;"	m	struct:__anon13
+seqPairArrayRight128	bwamem.h	/^    SeqPair *seqPairArrayRight128[MAX_THREADS];$/;"	m	struct:__anon13
+seq_len	bwt.h	/^	bwtint_t seq_len; \/\/ sequence length$/;"	m	struct:__anon14
+seq_len	bwt.h	/^	int64_t seq_len;$/;"	m	struct:__anon15
+seq_nt4_table	ksw.cpp	/^unsigned char seq_nt4_table[256] = {$/;"	v
+seqid	bandedSWA.h	/^    int seqid, regid;$/;"	m	struct:dnaSeqPair
+seqid	bwamem.h	/^    int32_t seqid, cseed;$/;"	m	struct:__anon7
+seqid	kswv.h	/^	int seqid, regid;$/;"	m	struct:dnaSeqPair
+seqs	bwamem.h	/^    bseq1_t          *seqs;$/;"	m	struct:worker_t
+seqs	fastmap.h	/^	bseq1_t *seqs;$/;"	m	struct:__anon19
+setupTicks	bandedSWA.h	/^    int64_t setupTicks;$/;"	m	class:BandedPairWiseSW
+setupTicks	kswv.h	/^	int64_t setupTicks;$/;"	m	class:kswv
+shared	kthread.h	/^	void *shared;$/;"	m	struct:ktp_t
+shift	ksw.h	/^	uint8_t shift, mdiff, max, size;$/;"	m	struct:_kswq_t
+shift	kswv.h	/^	uint8_t shift, mdiff, max, size;$/;"	m	struct:__anon27
+size	ksw.h	/^	uint8_t shift, mdiff, max, size;$/;"	m	struct:_kswq_t
+size	kswv.h	/^	uint8_t shift, mdiff, max, size;$/;"	m	struct:__anon27
+slen	ksw.h	/^	int qlen, slen;$/;"	m	struct:_kswq_t
+slen	kswv.h	/^	int qlen, slen;$/;"	m	struct:__anon27
+smem_aux_destroy	bwamem.cpp	/^static void smem_aux_destroy(smem_aux_t *a)$/;"	f	file:
+smem_aux_init	bwamem.cpp	/^static smem_aux_t *smem_aux_init()$/;"	f	file:
+smem_aux_t	bwamem.h	/^} smem_aux_t;$/;"	t	typeref:struct:__anon12
+smem_i	bwamem.h	/^typedef struct __smem_i smem_i;$/;"	t	typeref:struct:__smem_i
+smem_struct	FMI_search.h	/^typedef struct smem_struct$/;"	s
+smithWaterman128_16	bandedSWA.cpp	/^void BandedPairWiseSW::smithWaterman128_16(uint16_t seq1SoA[],$/;"	f	class:BandedPairWiseSW
+smithWaterman128_8	bandedSWA.cpp	/^void BandedPairWiseSW::smithWaterman128_8(uint8_t seq1SoA[],$/;"	f	class:BandedPairWiseSW
+smithWaterman256_16	bandedSWA.cpp	/^void BandedPairWiseSW::smithWaterman256_16(uint16_t seq1SoA[],$/;"	f	class:BandedPairWiseSW
+smithWaterman256_8	bandedSWA.cpp	/^void BandedPairWiseSW::smithWaterman256_8(uint8_t seq1SoA[],$/;"	f	class:BandedPairWiseSW
+smithWaterman512_16	bandedSWA.cpp	/^void BandedPairWiseSW::smithWaterman512_16(uint16_t seq1SoA[],$/;"	f	class:BandedPairWiseSW
+smithWaterman512_8	bandedSWA.cpp	/^void BandedPairWiseSW::smithWaterman512_8(uint8_t seq1SoA[],$/;"	f	class:BandedPairWiseSW
+smithWatermanBatchWrapper16	bandedSWA.cpp	/^void BandedPairWiseSW::smithWatermanBatchWrapper16(SeqPair *pairArray,$/;"	f	class:BandedPairWiseSW
+smithWatermanBatchWrapper8	bandedSWA.cpp	/^void BandedPairWiseSW::smithWatermanBatchWrapper8(SeqPair *pairArray,$/;"	f	class:BandedPairWiseSW
+socket_connect	kopen.cpp	/^static int socket_connect(const char *host, const char *port)$/;"	f	file:
+socket_wait	kopen.cpp	/^static int socket_wait(int fd, int is_read)$/;"	f	file:
+sort1Ticks	bandedSWA.h	/^    int64_t sort1Ticks;$/;"	m	class:BandedPairWiseSW
+sort1Ticks	kswv.h	/^	int64_t sort1Ticks;$/;"	m	class:kswv
+sort2Ticks	bandedSWA.h	/^    int64_t sort2Ticks;$/;"	m	class:BandedPairWiseSW
+sort2Ticks	kswv.h	/^	int64_t sort2Ticks;$/;"	m	class:kswv
+sortPairsId	bandedSWA.cpp	/^inline void sortPairsId(SeqPair *pairArray, int32_t first, int32_t count,$/;"	f
+sortPairsId	bandedSWA.cpp	/^inline void sortPairsId(SeqPair *pairArray, int32_t first,$/;"	f
+sortPairsLen	bandedSWA.cpp	/^inline void sortPairsLen(SeqPair *pairArray, int32_t count, SeqPair *tempArray,$/;"	f
+sortPairsLen	bandedSWA.cpp	/^inline void sortPairsLen(SeqPair *pairArray, int32_t count,$/;"	f
+sortPairsLen	bwamem.cpp	/^inline void sortPairsLen(SeqPair *pairArray, int32_t count, SeqPair *tempArray, int32_t *hist)$/;"	f
+sortPairsLenExt	bwamem.cpp	/^inline void sortPairsLenExt(SeqPair *pairArray, int32_t count, SeqPair *tempArray,$/;"	f
+sortSMEMs	FMI_search.cpp	/^void FMI_search::sortSMEMs(SMEM *matchArray,$/;"	f	class:FMI_search
+sort_alnreg_re	bwamem.cpp	/^void sort_alnreg_re(int n, mem_alnreg_t* a) {$/;"	f
+sort_alnreg_score	bwamem.cpp	/^void sort_alnreg_score(int n, mem_alnreg_t* a) {$/;"	f
+sort_classify	bwamem.cpp	/^int64_t sort_classify(mem_cache *mmc, int64_t pcnt, int tid)$/;"	f
+split_factor	bwamem.h	/^    float split_factor;     \/\/ split into a seed if MEM is longer than min_seed_len*split_factor$/;"	m	struct:mem_opt_t
+split_width	bwamem.h	/^    int split_width;        \/\/ split into a seed if its occurence is smaller than this value$/;"	m	struct:mem_opt_t
+spot	kswv.cpp	/^int spot = 42419;$/;"	v
+stage1sort	sais.h	/^stage1sort(string_type T, sarray_type SA,$/;"	f	namespace:saisxx_private
+stage3sort	sais.h	/^stage3sort(string_type T, sarray_type SA, bucketC_type C, bucketB_type B,$/;"	f	namespace:saisxx_private
+stat	bwamem.cpp	/^int stat;$/;"	v
+std	bwamem.h	/^    double avg, std; \/\/ mean and stddev of the insert size distribution$/;"	m	struct:__anon10
+steal_work	kthread.cpp	/^static inline long steal_work(kt_for_t *t)$/;"	f	file:
+step	kthread.h	/^	int step;$/;"	m	struct:__anon29
+sub	bwamem.h	/^    int score, sub, alt_sc;$/;"	m	struct:__anon11
+sub	bwamem.h	/^    int sub;        \/\/ 2nd best SW score$/;"	m	struct:mem_alnreg_t
+sub_n	bwamem.h	/^    int sub_n;      \/\/ approximate number of suboptimal hits$/;"	m	struct:mem_alnreg_t
+suffixsort	sais.h	/^suffixsort(string_type T, sarray_type SA,$/;"	f	namespace:saisxx_private
+swTicks	bandedSWA.h	/^    int64_t swTicks;$/;"	m	class:BandedPairWiseSW
+swTicks	kswv.h	/^	int64_t swTicks;$/;"	m	class:kswv
+t	kthread.h	/^	struct kt_for_t *t;$/;"	m	struct:__anon30	typeref:struct:__anon30::kt_for_t
+task_size	fastmap.h	/^	int64_t task_size;$/;"	m	struct:__anon18
+tb	ksw.h	/^	int tb, qb; \/\/ target start and query start$/;"	m	struct:__anon26
+tb	kswv.h	/^	int tb, qb; \/\/ target start and query start$/;"	m	struct:__anon28
+tb	kswv.h	/^	int tb, qb; \/\/ target start and query start$/;"	m	struct:dnaSeqPair
+tcnt	bwamem.cpp	/^            int tcnt = 0;$/;"	v
+te	ksw.h	/^	int te, qe; \/\/ target end and query end$/;"	m	struct:__anon26
+te	kswv.h	/^	int te, qe; \/\/ target end and query end$/;"	m	struct:__anon28
+te	kswv.h	/^	int te, qe; \/\/ target end and query end$/;"	m	struct:dnaSeqPair
+te2	ksw.h	/^	int score2, te2; \/\/ second best score and ending position on the target$/;"	m	struct:__anon26
+te2	kswv.h	/^	int score2, te2; \/\/ second best score and ending position on the target$/;"	m	struct:__anon28
+te2	kswv.h	/^	int score2, te2; \/\/ second best score and ending position on the target$/;"	m	struct:dnaSeqPair
+test_and_launch	runsimd.cpp	/^static void test_and_launch(char *argv[], char *prefix, const char *simd) \/\/ we assume prefix is long enough$/;"	f	file:
+test_and_merge	bwamem.cpp	/^static int test_and_merge(const mem_opt_t *opt, int64_t l_pac, mem_chain_t *c,$/;"	f	file:
+tle	bandedSWA.h	/^    int32_t score, tle, gtle, qle;$/;"	m	struct:dnaOutScore
+tle	bandedSWA.h	/^    int32_t score, tle, gtle, qle;$/;"	m	struct:dnaSeqPair
+tmpv	bwamem.h	/^    bwtintv_v mem, mem1, *tmpv[2];$/;"	m	struct:__anon12
+tprof	main.cpp	/^uint64_t proc_freq, tprof[LIM_R][LIM_C], prof[LIM_R];$/;"	v
+traverse_func	bwamem.cpp	958;"	d	file:
+traverse_func	bwamem.cpp	960;"	d	file:
+trim_readno	bwa.cpp	/^static inline void trim_readno(kstring_t *s)$/;"	f	file:
+truesc	bwamem.h	/^    int truesc;     \/\/ actual score corresponding to the aligned region; possibly smaller than $score$/;"	m	struct:mem_alnreg_t
+type	kopen.cpp	/^	int type, fd;$/;"	m	struct:__anon23	file:
+ubyte_t	bntseq.h	/^typedef uint8_t ubyte_t;$/;"	t
+ubyte_t	bwt.h	/^typedef unsigned char ubyte_t;$/;"	t
+uint64_v	utils.h	/^typedef struct { size_t n, m; uint64_t *a; } uint64_v;$/;"	t	typeref:struct:__anon34
+update_a	fastmap.cpp	/^static void update_a(mem_opt_t *opt, const mem_opt_t *opt0)$/;"	f	file:
+usage	fastmap.cpp	/^static void usage(const mem_opt_t *opt)$/;"	f	file:
+usage	main.cpp	/^int usage()$/;"	f
+w	bwamem.h	/^    int w;                  \/\/ band width$/;"	m	struct:mem_opt_t
+w	bwamem.h	/^    int w;          \/\/ actual band width used in extension$/;"	m	struct:mem_alnreg_t
+w	bwamem.h	/^    uint32_t w:29, kept:2, is_alt:1;$/;"	m	struct:__anon7
+w	kthread.h	/^	ktf_worker_t *w;$/;"	m	struct:kt_for_t
+w	kthread.h	/^	worker_t *w;$/;"	m	struct:__anon29
+w_ambig	bandedSWA.h	/^    int8_t w_ambig;$/;"	m	class:BandedPairWiseSW
+w_ambig	kswv.cpp	/^int32_t w_match, w_mismatch, w_open, w_extend, w_ambig;$/;"	v
+w_ambig	kswv.h	/^	int8_t w_ambig;$/;"	m	class:kswv
+w_extend	bandedSWA.h	/^    int8_t w_extend;$/;"	m	class:BandedPairWiseSW
+w_extend	kswv.cpp	/^int32_t w_match, w_mismatch, w_open, w_extend, w_ambig;$/;"	v
+w_extend	kswv.h	/^	int8_t w_extend;$/;"	m	class:kswv
+w_match	bandedSWA.h	/^    int8_t w_match;$/;"	m	class:BandedPairWiseSW
+w_match	kswv.cpp	/^int32_t w_match, w_mismatch, w_open, w_extend, w_ambig;$/;"	v
+w_match	kswv.h	/^	int8_t w_match;$/;"	m	class:kswv
+w_mismatch	bandedSWA.h	/^    int8_t w_mismatch;$/;"	m	class:BandedPairWiseSW
+w_mismatch	kswv.cpp	/^int32_t w_match, w_mismatch, w_open, w_extend, w_ambig;$/;"	v
+w_mismatch	kswv.h	/^	int8_t w_mismatch;$/;"	m	class:kswv
+w_open	bandedSWA.h	/^    int8_t w_open;$/;"	m	class:BandedPairWiseSW
+w_open	kswv.cpp	/^int32_t w_match, w_mismatch, w_open, w_extend, w_ambig;$/;"	v
+w_open	kswv.h	/^	int8_t w_open;$/;"	m	class:kswv
+worker_aln	bwamem.cpp	/^static void worker_aln(void *data, int seq_id, int batch_size, int tid)$/;"	f	file:
+worker_bwt	bwamem.cpp	/^static void worker_bwt(void *data, int seq_id, int batch_size, int tid)$/;"	f	file:
+worker_sam	bwamem.cpp	/^static void worker_sam(void *data, int seqid, int batch_size, int tid)$/;"	f	file:
+worker_t	bwamem.h	/^typedef struct worker_t {$/;"	s
+worker_t	bwamem.h	/^} worker_t;$/;"	t	typeref:struct:worker_t
+workers	kthread.h	/^	ktp_worker_t *workers;$/;"	m	struct:ktp_t
+write_bytes	kopen.cpp	/^static int write_bytes(int fd, const char *buf, size_t len)$/;"	f	file:
+wsize	bwamem.h	/^    int64_t wsize[MAX_THREADS];$/;"	m	struct:__anon13
+wsize_buf_qer	bwamem.h	/^    int64_t wsize_buf_qer[MAX_THREADS*CACHE_LINE];$/;"	m	struct:__anon13
+wsize_buf_ref	bwamem.h	/^    int64_t wsize_buf_ref[MAX_THREADS*CACHE_LINE]; $/;"	m	struct:__anon13
+wsize_mem	bwamem.h	/^    int64_t wsize_mem[MAX_THREADS];$/;"	m	struct:__anon13
+wsize_mem_r	bwamem.h	/^    int64_t wsize_mem_r[MAX_THREADS];$/;"	m	struct:__anon13
+wsize_mem_s	bwamem.h	/^    int64_t wsize_mem_s[MAX_THREADS];$/;"	m	struct:__anon13
+x	bwt.h	/^	bwtint_t x[3], info;$/;"	m	struct:__anon16
+x	kbtree.h	/^	kbnode_t *x;$/;"	m	struct:__anon21
+x	utils.h	/^	uint64_t x, y;$/;"	m	struct:__anon33
+x86_simd	runsimd.cpp	/^static int x86_simd(void)$/;"	f	file:
+xassert	utils.h	49;"	d
+xopen	utils.h	45;"	d
+xreopen	utils.h	46;"	d
+xzopen	utils.h	47;"	d
+y	utils.h	/^	uint64_t x, y;$/;"	m	struct:__anon33
+zdrop	bandedSWA.h	/^    int end_bonus, zdrop;$/;"	m	class:BandedPairWiseSW
+zdrop	bwamem.h	/^    int zdrop;              \/\/ Z-dropoff$/;"	m	struct:mem_opt_t
+~BandedPairWiseSW	bandedSWA.cpp	/^BandedPairWiseSW::~BandedPairWiseSW() {$/;"	f	class:BandedPairWiseSW
+~FMI_search	FMI_search.cpp	/^FMI_search::~FMI_search()$/;"	f	class:FMI_search
+~indexEle	read_index_ele.cpp	/^indexEle::~indexEle()$/;"	f	class:indexEle
+~kswv	kswv.cpp	/^kswv::~kswv() {$/;"	f	class:kswv
