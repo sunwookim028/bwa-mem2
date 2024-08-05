@@ -89,7 +89,7 @@ void indexEle::bwa_idx_load_ele(const char *hint, int which)
             idx->bns->fp_pac = 0;
         }
     }
-    free(prefix);
+    //free(prefix);
 }
 
 #include <sys/file.h>

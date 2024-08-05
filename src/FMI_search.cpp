@@ -423,12 +423,33 @@ void FMI_search::load_index()
     cp_occ = NULL;
 
     err_fread_noeof(&count[0], sizeof(int64_t), 5, cpstream);
+    err_fread_noeof(&count2[0], sizeof(int64_t), 17, cpstream);
+
     if ((cp_occ = (CP_OCC *)_mm_malloc(cp_occ_size * sizeof(CP_OCC), 64)) == NULL) {
         fprintf(stderr, "ERROR! unable to allocated cp_occ memory\n");
         exit(EXIT_FAILURE);
     }
 
     err_fread_noeof(cp_occ, sizeof(CP_OCC), cp_occ_size, cpstream);
+    fprintf(stderr, "Just loaded from file cp_occ[0] %ld %ld %ld %ld %lu %lu %lu %lu \n",\
+            cp_occ[0].cp_count[0],\
+            cp_occ[0].cp_count[1],\
+            cp_occ[0].cp_count[2],\
+            cp_occ[0].cp_count[3],\
+            cp_occ[0].one_hot_bwt_str[0],\
+            cp_occ[0].one_hot_bwt_str[1],\
+            cp_occ[0].one_hot_bwt_str[2],\
+            cp_occ[0].one_hot_bwt_str[3]);
+
+    if ((cp_occ2 = (CP_OCC2 *)_mm_malloc(cp_occ_size * sizeof(CP_OCC2), 64)) == NULL) {
+        fprintf(stderr, "ERROR! unable to allocated cp_occ2 memory\n");
+        exit(EXIT_FAILURE);
+    }
+    err_fread_noeof(cp_occ2, sizeof(CP_OCC2), cp_occ_size, cpstream);
+            fprintf(stderr, "Just loaded from file cp_occ2[0] %ld %lu \n",\
+                                cp_occ2[0].cp_count[0],\
+                                cp_occ2[0].one_hot_bwt_str[0]);
+
     int64_t ii = 0;
     for(ii = 0; ii < 5; ii++)// update read count structure
     {
@@ -1045,13 +1066,14 @@ SMEM FMI_search::backwardExt(SMEM smem, uint8_t a)
         GET_OCC(sp, b, occ_id_sp, y_sp, occ_sp, one_hot_bwt_str_c_sp, match_mask_sp);
         GET_OCC(ep, b, occ_id_ep, y_ep, occ_ep, one_hot_bwt_str_c_ep, match_mask_ep);
         k[b] = count[b] + occ_sp;
-
+        s[b] = occ_ep - occ_sp;
+#if 0
         if (b == a)
         {
             printf("base: %d, count[base] %lu, occ_sp %lu, occ_ep %lu\n", b, count[b], occ_sp, occ_ep);
             printf("sp: %ld, occ_sp = cp_occ[occ_id_sp].cp_count[base] %ld\n", sp, occ_sp);
         }
-        s[b] = occ_ep - occ_sp;
+#endif
     }
 
     int64_t sentinel_offset = 0;

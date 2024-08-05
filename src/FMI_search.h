@@ -57,6 +57,12 @@ typedef struct checkpoint_occ_scalar
     uint64_t one_hot_bwt_str[4];
 }CP_OCC;
 
+typedef struct checkpoint_occ2_scalar
+{
+    int64_t cp_count[16];
+    uint64_t one_hot_bwt_str[16];
+}CP_OCC2;
+
 #if defined(__clang__) || defined(__GNUC__)
 static inline int _mm_countbits_64(unsigned long x) {
     return __builtin_popcountl(x);
@@ -173,6 +179,9 @@ private:
         uint32_t *sa_ls_word;
         int8_t *sa_ms_byte;
         CP_OCC *cp_occ;
+
+        int64_t count2[5];
+        CP_OCC2 *cp_occ2;
 
         uint64_t *one_hot_mask_array;
 
