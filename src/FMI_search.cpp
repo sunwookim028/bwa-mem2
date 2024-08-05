@@ -544,6 +544,11 @@ void FMI_search::getSMEMsOnePosOneThread(uint8_t *enc_qdb,
                     SMEM smem_ = smem;
 
                     // Forward extension is backward extension with the BWT of reverse complement
+
+                    if (x == 0)
+                    {
+                        fprintf(stderr, "SAI (k, l, s) before forward extend: %ld, %ld, %ld\n", smem.k, smem.l, smem.s);
+                    }
                     smem_.k = smem.l;
                     smem_.l = smem.k;
                     SMEM newSmem_ = backwardExt(smem_, 3 - a);
@@ -552,6 +557,11 @@ void FMI_search::getSMEMsOnePosOneThread(uint8_t *enc_qdb,
                     newSmem.k = newSmem_.l;
                     newSmem.l = newSmem_.k;
                     newSmem.n = j;
+
+                    if (x == 0)
+                    {
+                        fprintf(stderr, "SAI (k, l, s) after forward extend: %ld, %ld, %ld\n", newSmem.k, newSmem.l, newSmem.s);
+                    }
 
                     int32_t s_neq_mask = newSmem.s != smem.s;
 
@@ -1035,6 +1045,12 @@ SMEM FMI_search::backwardExt(SMEM smem, uint8_t a)
         GET_OCC(sp, b, occ_id_sp, y_sp, occ_sp, one_hot_bwt_str_c_sp, match_mask_sp);
         GET_OCC(ep, b, occ_id_ep, y_ep, occ_ep, one_hot_bwt_str_c_ep, match_mask_ep);
         k[b] = count[b] + occ_sp;
+
+        if (b == a)
+        {
+            printf("base: %d, count[base] %lu, occ_sp %lu, occ_ep %lu\n", b, count[b], occ_sp, occ_ep);
+            printf("sp: %ld, occ_sp = cp_occ[occ_id_sp].cp_count[base] %ld\n", sp, occ_sp);
+        }
         s[b] = occ_ep - occ_sp;
     }
 
