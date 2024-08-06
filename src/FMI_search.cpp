@@ -141,7 +141,8 @@ void FMI_search::pac2nt(const char *fn_pac, std::string &reference_seq)
 	free(buf2);
 }
 
-int FMI_search::build_fm_index(const char *ref_file_name, char *binary_seq, int64_t ref_seq_len, int64_t *sa_bwt, int64_t *count) {
+int FMI_search::build_fm_index(const char *ref_file_name, char *binary_seq, int64_t ref_seq_len, int64_t *sa_bwt)
+{
     printf("ref_seq_len = %ld\n", ref_seq_len);
     fflush(stdout);
 
@@ -155,26 +156,36 @@ int FMI_search::build_fm_index(const char *ref_file_name, char *binary_seq, int6
     outstream.seekg(0);	
 
     printf("count = %ld, %ld, %ld, %ld, %ld\n", count[0], count[1], count[2], count[3], count[4]);
+    printf("count2 = %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld\n", \
+                    count2[0], count2[1], count2[2], count2[3], count2[4],\
+                              count2[5], count2[6], count2[7], count2[8],\
+                              count2[9], count2[10], count2[11], count2[12],\
+                              count2[13], count2[14], count2[15], count2[16]);
     fflush(stdout);
 
     uint8_t *bwt;
+    uint8_t *bwt2;
 
     ref_seq_len++;
     outstream.write((char *)(&ref_seq_len), 1 * sizeof(int64_t));
     outstream.write((char*)count, 5 * sizeof(int64_t));
+    outstream.write((char*)count2, 17 * sizeof(int64_t));
 
     int64_t i;
     int64_t ref_seq_len_aligned = ((ref_seq_len + CP_BLOCK_SIZE - 1) / CP_BLOCK_SIZE) * CP_BLOCK_SIZE;
     int64_t size = ref_seq_len_aligned * sizeof(uint8_t);
     bwt = (uint8_t *)_mm_malloc(size, 64);
+    bwt2 = (uint8_t *)_mm_malloc(size, 64);
     assert_not_null(bwt, size, index_alloc);
+    assert_not_null(bwt2, size, index_alloc);
 
-    int64_t sentinel_index = -1;
+    sentinel_index = -1;
+    sentinel_index2 = -1;
     for(i=0; i< ref_seq_len; i++)
     {
         if(sa_bwt[i] == 0)
         {
-            bwt[i] = 4;
+            bwt[i] = 4; // <- This represents the virtual '$'
             printf("BWT[%ld] = 4\n", i);
             sentinel_index = i;
         }
@@ -196,9 +207,47 @@ int FMI_search::build_fm_index(const char *ref_file_name, char *binary_seq, int6
                         exit(EXIT_FAILURE);
             }
         }
+        if(sa_bwt[i] == 1)
+        {
+            bwt2[i] = 4;
+            printf("BWT2[%ld] = 4\n", i);
+            sentinel_index2 = i;
+            bwt_sentinel2_c = bwt[i];
+            printf("BWT char at here = %d\n", bwt_sentinel2_c);
+        }
+        else
+        {
+            char c;
+            if (sa_bwt[i] == 0)
+            {
+                c = binary_seq[ref_seq_len - 1];
+                //fprintf(stderr, "Expected last char of ref: %c. Or maybe this: %c?\n", c, c_);
+            }
+            else 
+            {
+                c = binary_seq[sa_bwt[i]-2];
+            }
+            switch(c)
+            {
+                case 0: bwt2[i] = 0;
+                          break;
+                case 1: bwt2[i] = 1;
+                          break;
+                case 2: bwt2[i] = 2;
+                          break;
+                case 3: bwt2[i] = 3;
+                          break;
+                default:
+                        fprintf(stderr, "ERROR! (BWT2) i = %ld, c = %c\n", i, c);
+                        exit(EXIT_FAILURE);
+            }
+        }
     }
     for(i = ref_seq_len; i < ref_seq_len_aligned; i++)
+    {
         bwt[i] = DUMMY_CHAR;
+        bwt2[i] = DUMMY_CHAR;
+    }
 
 
     printf("CP_SHIFT = %d, CP_MASK = %d\n", CP_SHIFT, CP_MASK);
@@ -206,52 +255,73 @@ int FMI_search::build_fm_index(const char *ref_file_name, char *binary_seq, int6
     fflush(stdout);
     // create checkpointed occ
     int64_t cp_occ_size = (ref_seq_len >> CP_SHIFT) + 1;
-    CP_OCC *cp_occ = NULL;
+    cp_occ = NULL;
+    cp_occ2 = NULL;
 
     size = cp_occ_size * sizeof(CP_OCC);
     cp_occ = (CP_OCC *)_mm_malloc(size, 64);
+    cp_occ2 = (CP_OCC2 *)_mm_malloc(cp_occ_size * sizeof(CP_OCC2), 64);
     assert_not_null(cp_occ, size, index_alloc);
+    assert_not_null(cp_occ2, size, index_alloc);
     memset(cp_occ, 0, cp_occ_size * sizeof(CP_OCC));
+    memset(cp_occ2, 0, cp_occ_size * sizeof(CP_OCC2));
     int64_t cp_count[16];
-
+    int64_t cp_count2[16];
     memset(cp_count, 0, 16 * sizeof(int64_t));
+    memset(cp_count2, 0, 16 * sizeof(int64_t));
     for(i = 0; i < ref_seq_len; i++)
     {
         if((i & CP_MASK) == 0)
         {
+            int32_t k;
             CP_OCC cpo;
-            cpo.cp_count[0] = cp_count[0];
-            cpo.cp_count[1] = cp_count[1];
-            cpo.cp_count[2] = cp_count[2];
-            cpo.cp_count[3] = cp_count[3];
+            for (k=0; k<4; k++)
+            {
+                cpo.cp_count[k] = cp_count[k];
+                cpo.one_hot_bwt_str[k] = 0;
+            }
+            CP_OCC2 cpo2;
+            for (k=0; k<16; k++)
+            {
+                cpo2.cp_count[k] = cp_count2[k];
+                cpo2.one_hot_bwt_str[k] = 0;
+            }
 
 			int32_t j;
-            cpo.one_hot_bwt_str[0] = 0;
-            cpo.one_hot_bwt_str[1] = 0;
-            cpo.one_hot_bwt_str[2] = 0;
-            cpo.one_hot_bwt_str[3] = 0;
-
 			for(j = 0; j < CP_BLOCK_SIZE; j++)
 			{
-                cpo.one_hot_bwt_str[0] = cpo.one_hot_bwt_str[0] << 1;
-                cpo.one_hot_bwt_str[1] = cpo.one_hot_bwt_str[1] << 1;
-                cpo.one_hot_bwt_str[2] = cpo.one_hot_bwt_str[2] << 1;
-                cpo.one_hot_bwt_str[3] = cpo.one_hot_bwt_str[3] << 1;
+                for (k=0; k<4; k++)
+                {
+                    cpo.one_hot_bwt_str[k] = cpo.one_hot_bwt_str[k] << 1;
+                }
+                for (k=0; k<16; k++)
+                {
+                    cpo2.one_hot_bwt_str[k] = cpo2.one_hot_bwt_str[k] << 1;
+                }
 				uint8_t c = bwt[i + j];
+				uint8_t c2 = bwt2[i + j];
                 //printf("c = %d\n", c);
                 if(c < 4)
                 {
                     cpo.one_hot_bwt_str[c] += 1;
+                    if (c2 < 4)
+                    {
+                        cpo2.one_hot_bwt_str[c2 * 4 + c] += 1;
+                    }
                 }
 			}
-
             cp_occ[i >> CP_SHIFT] = cpo;
+            cp_occ2[i >> CP_SHIFT] = cpo2;
         }
         cp_count[bwt[i]]++;
+        cp_count2[bwt2[i] * 4 + bwt[i]]++;
     }
     outstream.write((char*)cp_occ, cp_occ_size * sizeof(CP_OCC));
-    _mm_free(cp_occ);
-    _mm_free(bwt);
+    outstream.write((char*)cp_occ2, cp_occ_size * sizeof(CP_OCC2));
+    _mm_free(cp_occ); cp_occ = nullptr;
+    _mm_free(cp_occ2); cp_occ2 = nullptr;
+    _mm_free(bwt); bwt = nullptr;
+    _mm_free(bwt2); bwt2 = nullptr;
 
     #if SA_COMPRESSION  
 
@@ -294,12 +364,14 @@ int FMI_search::build_fm_index(const char *ref_file_name, char *binary_seq, int6
     #endif
 
     outstream.write((char *)(&sentinel_index), 1 * sizeof(int64_t));
+    outstream.write((char *)(&sentinel_index2), 1 * sizeof(int64_t));
+    outstream.write((uint8_t*)(&bwt_sentinel2_c), 1 * sizeof(uint8_t));
     outstream.close();
     printf("max_occ_ind = %ld\n", i >> CP_SHIFT);    
     fflush(stdout);
 
-    _mm_free(sa_ms_byte);
-    _mm_free(sa_ls_word);
+    _mm_free(sa_ms_byte); sa_ms_byte = nullptr;
+    _mm_free(sa_ls_word); sa_ls_word = nullptr;
     return 0;
 }
 
@@ -330,8 +402,8 @@ int FMI_search::build_index() {
     binary_ref_stream.seekg(0);
     fprintf(stderr, "init ticks = %llu\n", __rdtsc() - startTick);
     startTick = __rdtsc();
-    int64_t i, count[16];
-	memset(count, 0, sizeof(int64_t) * 16);
+    int64_t i;
+	memset(count, 0, sizeof(int64_t) * 5);
     for(i = 0; i < pac_len; i++)
     {
         switch(reference_seq[i])
@@ -353,11 +425,84 @@ int FMI_search::build_index() {
 
         }
     }
+    printf("Raw count = %ld, %ld, %ld, %ld, %ld\n", count[0], count[1], count[2], count[3], count[4]);
     count[4]=count[0]+count[1]+count[2]+count[3];
     count[3]=count[0]+count[1]+count[2];
     count[2]=count[0]+count[1];
     count[1]=count[0];
     count[0]=0;
+    printf("count = %ld, %ld, %ld, %ld, %ld\n", count[0], count[1], count[2], count[3], count[4]);
+	memset(count2, 0, sizeof(int64_t) * 17);
+    for(i = 0; i < pac_len - 1; i++)
+    {
+        switch(reference_seq[i])
+        {
+            case 'A':
+                switch(reference_seq[i + 1])
+                {
+                    case 'A': ++count2[0]; break;
+                    case 'C': ++count2[1]; break;
+                    case 'G': ++count2[2]; break;
+                    case 'T': ++count2[3]; break;
+                    default: fprintf(stderr, "Heey A\n");
+                }
+                break;
+            case 'C':
+                switch(reference_seq[i + 1])
+                {
+                    case 'A': ++count2[4]; break;
+                    case 'C': ++count2[5]; break;
+                    case 'G': ++count2[6]; break;
+                    case 'T': ++count2[7]; break;
+                    default: fprintf(stderr, "Heey C\n");
+                }
+                break;
+            case 'G':
+                switch(reference_seq[i + 1])
+                {
+                    case 'A': ++count2[8]; break;
+                    case 'C': ++count2[9]; break;
+                    case 'G': ++count2[10]; break;
+                    case 'T': ++count2[11]; break;
+                    default: fprintf(stderr, "Heey G\n");
+                }
+                break;
+            case 'T':
+                switch(reference_seq[i + 1])
+                {
+                    case 'A': ++count2[12]; break;
+                    case 'C': ++count2[13]; break;
+                    case 'G': ++count2[14]; break;
+                    case 'T': ++count2[15]; break;
+                    default: fprintf(stderr, "Heey T\n");
+                }
+                break;
+            default:;
+        }
+    }
+
+    printf("Raw count2 = %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld\n", \
+                    count2[0], count2[1], count2[2], count2[3], count2[4],\
+                              count2[5], count2[6], count2[7], count2[8],\
+                              count2[9], count2[10], count2[11], count2[12],\
+                              count2[13], count2[14], count2[15], count2[16]);
+    for (i = 16; i > 0; i--)
+    {
+        int64_t sum = 0;
+        for (int ii = 0; ii < i; ii++)
+        {
+            sum += count2[ii];
+        }
+        count2[i] = sum;
+    }
+    count2[0] = 0;
+
+    printf("count2 = %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld\n", \
+                    count2[0], count2[1], count2[2], count2[3], count2[4],\
+                              count2[5], count2[6], count2[7], count2[8],\
+                              count2[9], count2[10], count2[11], count2[12],\
+                              count2[13], count2[14], count2[15], count2[16]);
+
     fprintf(stderr, "ref seq len = %ld\n", pac_len);
     binary_ref_stream.write(binary_ref_seq, pac_len * sizeof(char));
     fprintf(stderr, "binary seq ticks = %llu\n", __rdtsc() - startTick);
@@ -374,16 +519,18 @@ int FMI_search::build_index() {
     fprintf(stderr, "build suffix-array ticks = %llu\n", __rdtsc() - startTick);
     startTick = __rdtsc();
 
-	build_fm_index(prefix, binary_ref_seq, pac_len, suffix_array, count);
+	build_fm_index(prefix, binary_ref_seq, pac_len, suffix_array);//, count);
     fprintf(stderr, "build fm-index ticks = %llu\n", __rdtsc() - startTick);
-    _mm_free(binary_ref_seq);
-    _mm_free(suffix_array);
+    _mm_free(binary_ref_seq); binary_ref_seq = nullptr;
+    _mm_free(suffix_array); suffix_array = nullptr;
     return 0;
 }
 
 void FMI_search::load_index()
 {
-    one_hot_mask_array = (uint64_t *)_mm_malloc(64 * sizeof(uint64_t), 64);
+    fprintf(stderr, "Creating one_hot_mask_array\n");
+    //one_hot_mask_array = (uint64_t *)_mm_malloc(64 * sizeof(uint64_t), 64);
+    one_hot_mask_array = (uint64_t *)malloc(64 * sizeof(uint64_t));
     one_hot_mask_array[0] = 0;
     uint64_t base = 0x8000000000000000L;
     one_hot_mask_array[1] = base;
@@ -392,6 +539,9 @@ void FMI_search::load_index()
     {
         one_hot_mask_array[i] = (one_hot_mask_array[i - 1] >> 1) | base;
     }
+    fprintf(stderr, "Created one_hot_mask_array\n");
+    fprintf(stderr, "samples: %lu %lu %lu\n", one_hot_mask_array[0],  one_hot_mask_array[1],  one_hot_mask_array[2]); 
+
 
     char *ref_file_name = file_name;
     //beCalls = 0;
@@ -455,6 +605,10 @@ void FMI_search::load_index()
     {
         count[ii] = count[ii] + 1;
     }
+    for(ii = 0; ii < 17; ii++)// update read count structure
+    {
+        count2[ii] = count2[ii] + 1;
+    }
 
     #if SA_COMPRESSION
 
@@ -477,6 +631,10 @@ void FMI_search::load_index()
     #if SA_COMPRESSION
     err_fread_noeof(&sentinel_index, sizeof(int64_t), 1, cpstream);
     fprintf(stderr, "* sentinel-index: %ld\n", sentinel_index);
+    err_fread_noeof(&sentinel_index2, sizeof(int64_t), 1, cpstream);
+    fprintf(stderr, "* sentinel-index2: %ld\n", sentinel_index2);
+    err_fread_noeof(&bwt_sentinel2_c, sizeof(uint8_t), 1, cpstream);
+    fprintf(stderr, "* bwt_sentinel2_c: %d\n", bwt_sentinel2_c);
     #endif
     fclose(cpstream);
 
@@ -503,7 +661,7 @@ void FMI_search::load_index()
     fprintf(stderr, "* Count:\n");
     for(x = 0; x < 5; x++)
     {
-        fprintf(stderr, "%ld,\t%lu\n", x, (unsigned long)count[x]);
+        fprintf(stderr, "%ld,\t%ld\n", x, count[x]);
     }
     fprintf(stderr, "\n");  
 
@@ -555,34 +713,46 @@ void FMI_search::getSMEMsOnePosOneThread(uint8_t *enc_qdb,
             int numPrev = 0;
             
             int j;
-            for(j = x + 1; j < readlength; j++)
+        if (x == 0)
+        {
+            for(j = x + 1; j < readlength; j += 2)
             {
                 // a = enc_qdb[rid * readlength + j];
                 a = enc_qdb[offset + j];
+                uint8_t a2 = enc_qdb[offset + j + 1];
                 next_x = j + 1;
-                if(a < 4)
+                if(a < 4 && a2 < 4)
                 {
                     SMEM smem_ = smem;
 
                     // Forward extension is backward extension with the BWT of reverse complement
 
-                    if (x == 0)
-                    {
-                        fprintf(stderr, "SAI (k, l, s) before forward extend: %ld, %ld, %ld\n", smem.k, smem.l, smem.s);
-                    }
+#if 1
+                        fprintf(stderr, "\nSAI (k, l, s) before forward extend 2: %ld, %ld, %ld\n", smem.k, smem.l, smem.s);
+#endif
                     smem_.k = smem.l;
                     smem_.l = smem.k;
-                    SMEM newSmem_ = backwardExt(smem_, 3 - a);
+                    SMEM newSmem_ = backwardExt2(smem_, 3 - a2, 3 - a);
+                    SMEM newSmemRef_ = backwardExt(smem_, 3 - a);
+                    SMEM newSmemRef2_ = backwardExt(newSmemRef_, 3 - a2);
+#if 1
+                        fprintf(stderr, "* SAI (k, l, s) after forward extend (base=%d): %ld, %ld, %ld\n", a, newSmemRef_.l, newSmemRef_.k, newSmemRef_.s);
+                        fprintf(stderr, "* SAI (k, l, s) after forward extend (base=%d): %ld, %ld, %ld\n", a2, newSmemRef2_.l, newSmemRef2_.k, newSmemRef2_.s);
+#endif
                     //SMEM newSmem_ = forwardExt(smem_, 3 - a);
                     SMEM newSmem = newSmem_;
                     newSmem.k = newSmem_.l;
                     newSmem.l = newSmem_.k;
                     newSmem.n = j;
 
-                    if (x == 0)
-                    {
-                        fprintf(stderr, "SAI (k, l, s) after forward extend: %ld, %ld, %ld\n", newSmem.k, newSmem.l, newSmem.s);
-                    }
+#if 1
+                        fprintf(stderr, "SAI (k, l, s) after forward extend 2 (base=%d, %d): %ld, %ld, %ld\n", a, a2, newSmem.k, newSmem.l, newSmem.s);
+                        newSmem_ = newSmemRef2_;
+                    newSmem = newSmem_;
+                    newSmem.k = newSmem_.l;
+                    newSmem.l = newSmem_.k;
+                    newSmem.n = j;
+#endif
 
                     int32_t s_neq_mask = newSmem.s != smem.s;
 
@@ -604,6 +774,50 @@ void FMI_search::getSMEMsOnePosOneThread(uint8_t *enc_qdb,
                     break;
                 }
             }
+        }
+        else 
+        {
+            for(j = x + 1; j < readlength; j++)
+            {
+                // a = enc_qdb[rid * readlength + j];
+                a = enc_qdb[offset + j];
+                next_x = j + 1;
+                if(a < 4)
+                {
+                    SMEM smem_ = smem;
+
+                    // Forward extension is backward extension with the BWT of reverse complement
+
+                    smem_.k = smem.l;
+                    smem_.l = smem.k;
+                    SMEM newSmem_ = backwardExt(smem_, 3 - a);
+                    //SMEM newSmem_ = forwardExt(smem_, 3 - a);
+                    SMEM newSmem = newSmem_;
+                    newSmem.k = newSmem_.l;
+                    newSmem.l = newSmem_.k;
+                    newSmem.n = j;
+
+                    int32_t s_neq_mask = newSmem.s != smem.s;
+
+                    prevArray[numPrev] = smem;
+                    numPrev += s_neq_mask;
+                    if(newSmem.s < min_intv_array[i])
+                    {
+                        next_x = j;
+                        break;
+                    }
+                    smem = newSmem;
+#ifdef ENABLE_PREFETCH
+                    _mm_prefetch((const char *)(&cp_occ[(smem.k) >> CP_SHIFT]), _MM_HINT_T0);
+                    _mm_prefetch((const char *)(&cp_occ[(smem.l) >> CP_SHIFT]), _MM_HINT_T0);
+#endif
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
             if(smem.s >= min_intv_array[i])
             {
 
@@ -1063,7 +1277,17 @@ SMEM FMI_search::backwardExt(SMEM smem, uint8_t a)
     {
         int64_t sp = (int64_t)(smem.k);
         int64_t ep = (int64_t)(smem.k) + (int64_t)(smem.s);
+#if 1
+//GET_OCC(pp, c, occ_id_pp, y_pp, occ_pp, one_hot_bwt_str_c_pp, match_mask_pp) 
+        int64_t occ_id_sp = sp >> CP_SHIFT; 
+        int64_t y_sp = sp & CP_MASK; 
+        int64_t occ_sp = cp_occ[occ_id_sp].cp_count[b]; 
+        uint64_t one_hot_bwt_str_c_sp = cp_occ[occ_id_sp].one_hot_bwt_str[b]; 
+        uint64_t match_mask_sp = one_hot_bwt_str_c_sp & one_hot_mask_array[y_sp]; 
+        occ_sp += _mm_countbits_64(match_mask_sp);
+#else
         GET_OCC(sp, b, occ_id_sp, y_sp, occ_sp, one_hot_bwt_str_c_sp, match_mask_sp);
+#endif
         GET_OCC(ep, b, occ_id_ep, y_ep, occ_ep, one_hot_bwt_str_c_ep, match_mask_ep);
         k[b] = count[b] + occ_sp;
         s[b] = occ_ep - occ_sp;
@@ -1086,6 +1310,69 @@ SMEM FMI_search::backwardExt(SMEM smem, uint8_t a)
     smem.k = k[a];
     smem.l = l[a];
     smem.s = s[a];
+    return smem;
+}
+
+SMEM FMI_search::backwardExt2(SMEM smem, uint8_t a, uint8_t a2)
+{
+    //beCalls++;
+    uint8_t b;
+    uint8_t basePair = a2 * 4 + a;
+
+    int64_t k[16], l[16], s[16];
+    for(b = 0; b < 16; b++)
+    {
+        int64_t sp = (int64_t)(smem.k);
+        int64_t ep = (int64_t)(smem.k) + (int64_t)(smem.s);
+#if 1
+//GET_OCC(pp, c, occ_id_pp, y_pp, occ_pp, one_hot_bwt_str_c_pp, match_mask_pp) 
+        int64_t occ_id_sp = sp >> CP_SHIFT; 
+        int64_t y_sp = sp & CP_MASK; 
+        int64_t occ_sp = cp_occ2[occ_id_sp].cp_count[b]; 
+        uint64_t one_hot_bwt_str_c_sp = cp_occ2[occ_id_sp].one_hot_bwt_str[b]; 
+        uint64_t match_mask_sp = one_hot_bwt_str_c_sp & one_hot_mask_array[y_sp]; 
+        occ_sp += _mm_countbits_64(match_mask_sp);
+#else
+        GET_OCC2(sp, b, occ_id_sp, y_sp, occ_sp, one_hot_bwt_str_c_sp, match_mask_sp);
+#endif
+        GET_OCC2(ep, b, occ_id_ep, y_ep, occ_ep, one_hot_bwt_str_c_ep, match_mask_ep);
+        k[b] = count2[b] + occ_sp;
+        s[b] = occ_ep - occ_sp;
+#if 0
+        if (b == a)
+        {
+            printf("base: %d, count[base] %lu, occ_sp %lu, occ_ep %lu\n", b, count[b], occ_sp, occ_ep);
+            printf("sp: %ld, occ_sp = cp_occ[occ_id_sp].cp_count[base] %ld\n", sp, occ_sp);
+        }
+#endif
+    }
+
+    int64_t sentinel_offset = 0;
+    if((smem.k <= sentinel_index) && ((smem.k + smem.s) > sentinel_index)) sentinel_offset = 1;
+    l[15] = smem.l + sentinel_offset;
+    for (b = 14; b > 0; b--)
+    {
+        l[b] = l[b + 1] + s[b + 1];
+    }
+    l[b] = l[b + 1] + s[b + 1];
+
+    if((smem.k <= sentinel_index2) && ((smem.k + smem.s) > sentinel_index2))
+    {
+        printf("** bwt_sentinel2_c = %d\n", bwt_sentinel2_c);
+        for (int bb = bwt_sentinel2_c; bb >= 0; bb--)
+        {
+            for (int bb_ = 3; bb_ >= 0; bb_--)
+            {
+                b = bb_ * 4 + bb;
+                l[b]++;
+            }
+        }
+    }
+
+
+    smem.k = k[basePair];
+    smem.l = l[basePair];
+    smem.s = s[basePair];
     return smem;
 }
 

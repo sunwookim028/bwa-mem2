@@ -77,6 +77,14 @@ GET_OCC(pp, c, occ_id_pp, y_pp, occ_pp, one_hot_bwt_str_c_pp, match_mask_pp) \
                 uint64_t one_hot_bwt_str_c_pp = cp_occ[occ_id_pp].one_hot_bwt_str[c]; \
                 uint64_t match_mask_pp = one_hot_bwt_str_c_pp & one_hot_mask_array[y_pp]; \
                 occ_pp += _mm_countbits_64(match_mask_pp);
+#define \
+GET_OCC2(pp, c, occ_id_pp, y_pp, occ_pp, one_hot_bwt_str_c_pp, match_mask_pp) \
+                int64_t occ_id_pp = pp >> CP_SHIFT; \
+                int64_t y_pp = pp & CP_MASK; \
+                int64_t occ_pp = cp_occ2[occ_id_pp].cp_count[c]; \
+                uint64_t one_hot_bwt_str_c_pp = cp_occ2[occ_id_pp].one_hot_bwt_str[c]; \
+                uint64_t match_mask_pp = one_hot_bwt_str_c_pp & one_hot_mask_array[y_pp]; \
+                occ_pp += _mm_countbits_64(match_mask_pp);
 
 typedef struct smem_struct
 {
@@ -172,6 +180,8 @@ class FMI_search: public indexEle
     
     int64_t reference_seq_len;
     int64_t sentinel_index;
+    int64_t sentinel_index2;
+    uint8_t bwt_sentinel2_c;
 private:
         char file_name[PATH_MAX];
         int64_t index_alloc;
@@ -180,7 +190,7 @@ private:
         int8_t *sa_ms_byte;
         CP_OCC *cp_occ;
 
-        int64_t count2[5];
+        int64_t count2[17];
         CP_OCC2 *cp_occ2;
 
         uint64_t *one_hot_mask_array;
@@ -191,9 +201,10 @@ private:
         int build_fm_index(const char *ref_file_name,
                                char *binary_seq,
                                int64_t ref_seq_len,
-                               int64_t *sa_bwt,
-                               int64_t *count);
+                               int64_t *sa_bwt);//,
+                               //int64_t *count);
         SMEM backwardExt(SMEM smem, uint8_t a);
+        SMEM backwardExt2(SMEM smem, uint8_t a, uint8_t a2);
 };
 
 #endif

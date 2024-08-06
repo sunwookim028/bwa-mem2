@@ -41,7 +41,7 @@ else ifeq ($(CXX), g++)
 endif		
 ARCH_FLAGS=	-msse -msse2 -msse3 -mssse3 -msse4.1
 MEM_FLAGS=	-DSAIS=1
-CPPFLAGS+=	-DENABLE_PREFETCH -DV17=1 -DMATE_SORT=0 $(MEM_FLAGS) 
+CPPFLAGS=	-DV17=1 -DMATE_SORT=0 $(MEM_FLAGS) #-DENABLE_PREFETCH 
 INCLUDES=   -Isrc -Iext/safestringlib/include
 LIBS=		-lpthread -lm -lz -L. -lbwa -Lext/safestringlib -lsafestring $(STATIC_GCC)
 OBJS=		src/fastmap.o src/bwtindex.o src/utils.o src/memcpy_bwamem.o src/kthread.o \
@@ -90,7 +90,7 @@ else
 myall:multi
 endif
 
-CXXFLAGS+=	-g -O3 -fpermissive $(ARCH_FLAGS) #-Wall ##-xSSE2
+CXXFLAGS=	-g -O0 -fpermissive $(ARCH_FLAGS) #-Wall ##-xSSE2
 
 .PHONY:all clean depend multi
 .SUFFIXES:.cpp .o
